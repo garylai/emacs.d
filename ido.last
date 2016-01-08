@@ -1,0 +1,85 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/" . "Users/")
+ ("/Users/" . "gary_lai/")
+ ("/Users/gary_lai/" . "Documents/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/gary_lai/"
+ "/Users/gary_lai/Documents/"
+ "/Users/gary_lai/Devlopment/Rust/dining_philosophers/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ ".bashrc"
+ ".emcas"
+ "CL.txt"
+ ".eslintrc"
+ "abc.txt"
+ "#.bashrc#"
+ ".bash_profile"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/gary_lai/" (22159 5818 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".profile" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".gradle/" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".cups/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/ios/" (22158 13781 0 0) "components/" "AwesomeProjectTests/" "AwesomeProject.xcodeproj/" "AwesomeProject/" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22158 13652 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js" "android/" ".watchmanconfig" ".gitignore" ".flowconfig" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/" (22158 13742 0 0) "settings.gradle" "gradlew.bat" "gradlew" "gradle.properties" "gradle/" "components/" "build.gradle" "build/" "app/" ".gradle/" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/components/" (22158 14181 0 0) "AwesomeProject.android.js" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/" (22157 64672 0 0) "React-Native/" "React/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/" (22158 2067 0 0) "AwesomeProject/" ".eslintrc" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React/react-tutorial-master/public/scripts/" (22157 50792 0 0) "test.js~" "test.jsx~" "test.js" "example.js~" "example.js" ".DS_Store" ".#test.js" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React/react-tutorial-master/public/" (22156 60369 0 0) "scripts/" "index.html~" "index.html" "css/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React/react-tutorial-master/" (22156 58363 0 0) "testing~" "testing" "server.rb" "server.py" "server.pl" "server.php~" "server.php" "server.js~" "server.js" "server.go" "requirements.txt" "README.md" "public/" "package.json" "node_modules/" "LICENSE" "comments.json" "app.json" ".gitignore" ".eslintrc~" ".eslintrc" ".editorconfig" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Documents/" (22156 52844 0 0) "Terminal Saved Output" "SQL Server Management Studio/" "Parallels/" ".parallels-vm-directory/" ".localized" ".DS_Store" "$RECYCLE.BIN/" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React/" (22156 47252 0 0) "test/" "react-tutorial-master/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React/test/" (22156 35481 0 0) "main.js~" "main.jsx~" "main.jsx" "main.js" ".eslintrc~" ".eslintrc" "#main.js#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/" (22155 8800 0 0) "Rust/" "node/" "dummy.keystore" "distributor app/" "CxSAST.790.Release.Setup_7.9.0.286/" "Checkmarx/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/Rust/dining_philosophers/src/" (22154 5360 0 0) "main.rs~" "main.rs" "../" "./")
+
+ ("/usr/" (22144 55201 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "bin/" "../" "./")
+
+ ("/usr/local/" (22148 40177 0 0) "var/" "SUPPORTERS.md" "share/" "README.md" "opt/" "LICENSE.txt" "Library/" "libexec/" "lib/" "etc/" "CONTRIBUTING.md" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".yardopts" ".travis.yml" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/usr/local/share/" (22147 38262 0 0) "zsh/" "man/" "info/" "icons/" "emacs/" "doc/" "applications/" "../" "./")
+
+ ("/usr/local/share/doc/" (22147 38262 0 0) "rust/" "homebrew/" "cargo/" "../" "./")
+
+ ("/usr/local/share/doc/rust/" (22147 38262 0 0) "README.md" "LICENSE-MIT" "LICENSE-APACHE" "html/" "COPYRIGHT" "../" "./")
+
+ ("/usr/local/share/doc/rust/html/" (22147 38264 0 0) "version_info.html" "tutorial.html" "style/" "std/" "src/" "SourceSerifPro-Regular.woff" "SourceSerifPro-LICENSE.txt" "SourceSerifPro-Bold.woff" "SourceCodePro-Semibold.woff" "SourceCodePro-Regular.woff" "SourceCodePro-LICENSE.txt" "search-index.js" "rustdoc.html" "rustc_unicode/" "rust.css" "reference.html" "playpen.js" "not_found.html" "normalize.css" "nomicon/" "main.js" "main.css" "LICENSE-MIT.txt" "LICENSE-APACHE.txt" "libc/" "jquery.js" "intro.html" "index.html" "implementors/" "Heuristica-LICENSE.txt" "Heuristica-Italic.woff" "guide.html" "guide-testing.html" "guide-tasks.html" "guide-strings.html" "guide-pointers.html" "guide-plugins.html" "guide-ownership.html" "guide-macros.html" "guide-ffi.html" "guide-error-handling.html" "guide-crates.html" "grammar.html" "full-toc.inc" "footer.inc" "FiraSans-Regular.woff" "FiraSans-Medium.woff" "FiraSans-LICENSE.txt" "favicon.inc" "error-index.html" "core/" "COPYRIGHT.txt" "complement-project-faq.html" "complement-lang-faq.html" "complement-design-faq.html" "collections/" "book/" "alloc/" ".lock" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/Rust/dining_philosophers/" (22148 61855 0 0) "target/" "src/" "Cargo.toml" "Cargo.lock" ".gitignore" ".git/" "#abc.txt#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/Rust/hello_world/" (22148 61855 0 0) "target/" "src/" "main.rs~" "Cargo.toml" "Cargo.lock" "#main.rs#" "#Cargo.toml#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/Rust/hello_world/src/" (22148 61875 0 0) "main.rs~" "main.rs" ".#main.rs" "#main.rs#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/Rust/" (22148 58914 0 0) "rust/" "hello_world/" "guessing_game/" "dining_philosophers/" ".DS_Store" "../" "./")
+
+ ("/Users/" (22138 23453 0 0) "Shared/" "gary_lai/" "admin/" ".localized" ".gary_lai.xahome/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
