@@ -3,6 +3,10 @@
 
 (defvar my-packages
   '(
+    darktooth-theme
+    js2-mode
+    company
+    flycheck
     json-reformat
     json-snatcher
     let-alist
@@ -19,7 +23,7 @@
     solarized-theme
     dash
     web-mode)
-  "A list of packages to ensure are installed at lunch.")
+ "A list of packages to ensure are installed at lunch.")
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))

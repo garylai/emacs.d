@@ -9,6 +9,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/garylai/.emacs.d/"
  "/Users/gary_lai/"
  "/Users/gary_lai/Documents/"
  "/Users/gary_lai/Devlopment/Rust/dining_philosophers/"
@@ -16,6 +17,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
  ".emacs"
  ".bashrc"
  ".emcas"
@@ -28,6 +30,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/garylai/.emacs.d/" (22160 55436 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore" ".git/" "../" "./")
+
  ("/Users/gary_lai/" (22159 5818 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".profile" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".gradle/" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".cups/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/ios/" (22158 13781 0 0) "components/" "AwesomeProjectTests/" "AwesomeProject.xcodeproj/" "AwesomeProject/" "../" "./")
