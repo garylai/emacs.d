@@ -6,6 +6,7 @@
     darktooth-theme
     js2-mode
     company
+    xclip
     flycheck
     json-reformat
     json-snatcher
@@ -118,3 +119,5 @@
 (setq flycheck-eslintrc "~/.eslintrc")
 ;; use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
+
+(xclip-mode 1)
