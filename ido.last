@@ -2,14 +2,18 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/gary_lai/Devlopment/" . "node/")
+ ("/Users/gary_lai/Devlopment/node/React-Native/" . "AwesomeProject/")
+ ("/Users/gary_lai/Devlopment/node/" . "React-Native/")
  ("/" . "Users/")
  ("/Users/" . "gary_lai/")
- ("/Users/gary_lai/" . "Documents/")
+ ("/Users/gary_lai/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/garylai/.emacs.d/"
+ "/Users/gary_lai/.emacs.d/"
+ "/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/"
  "/Users/gary_lai/"
  "/Users/gary_lai/Documents/"
  "/Users/gary_lai/Devlopment/Rust/dining_philosophers/"
@@ -18,6 +22,7 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
+ "index.ios.js"
  ".emacs"
  ".bashrc"
  ".emcas"
@@ -30,19 +35,35 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/garylai/.emacs.d/" (22160 55436 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore" ".git/" "../" "./")
+ ("/Users/gary_lai/.emacs.d/" (22163 27526 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore~" ".gitignore" ".git/" "../" "./")
 
- ("/Users/gary_lai/" (22159 5818 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".profile" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".gradle/" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".cups/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/components/" (22163 27524 0 0) "MainNavigation.js~" "MainNavigation.js" "AwesomeProject.js~" "AwesomeProject.js" "../" "./")
+
+ ("/Users/gary_lai/" (22163 7187 0 0) "selfProj/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".subversion/" ".profile" ".plugman/" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".lesshst" ".ionic/" ".gradle/" ".gitconfig" ".emacs~" ".emacs.d/" ".DS_Store" ".cups/" ".cordova/" ".config/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/" (22163 7155 0 0) "React-Native/" "React/" "ionic/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22163 26381 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js~" "index.android.js" "common/" "android/" ".watchmanconfig" ".gitignore" ".flowconfig" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/" (22159 10056 0 0) "components/" "../" "./")
+
+ ("/Users/gary_lai/selfProj/node/" (22159 29763 0 0) "mobi-comic-gen/" "../" "./")
+
+ ("/Users/gary_lai/selfProj/node/mobi-comic-gen/" (22163 3096 0 0) "src/" "package.json~" "package.json" "node_modules/" "app.js~" "app.js" ".gitignore~" ".gitignore" ".git/" ".eslintrc~" ".eslintrc" "../" "./")
+
+ ("/Users/gary_lai/selfProj/node/mobi-comic-gen/src/" (22159 33016 0 0) "logger.js~" "logger.js" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/" (22159 29494 0 0) "node/" "ios/" "dummy.keystore" "distributor app/" "CxSAST.790.Release.Setup_7.9.0.286/" "Checkmarx/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/selfProj/" (22159 29705 0 0) "Rust/" "node/" "ios/" ".DS_Store" "../" "./")
+
+ ("/Users/gary_lai/.nvm/versions/node/v5.4.0/lib/node_modules/" (22159 35901 0 0) "react-native-cli/" "npm/" "mobi-comic-gen/" "eslint-plugin-react/" "eslint/" "browserify/" "babel-eslint/" ".DS_Store" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/ios/" (22158 13781 0 0) "components/" "AwesomeProjectTests/" "AwesomeProject.xcodeproj/" "AwesomeProject/" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22158 13652 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js" "android/" ".watchmanconfig" ".gitignore" ".flowconfig" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/" (22158 13742 0 0) "settings.gradle" "gradlew.bat" "gradlew" "gradle.properties" "gradle/" "components/" "build.gradle" "build/" "app/" ".gradle/" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/components/" (22158 14181 0 0) "AwesomeProject.android.js" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/" (22157 64672 0 0) "React-Native/" "React/" ".DS_Store" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/" (22158 2067 0 0) "AwesomeProject/" ".eslintrc" "../" "./")
 
@@ -57,8 +78,6 @@
  ("/Users/gary_lai/Devlopment/node/React/" (22156 47252 0 0) "test/" "react-tutorial-master/" ".DS_Store" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React/test/" (22156 35481 0 0) "main.js~" "main.jsx~" "main.jsx" "main.js" ".eslintrc~" ".eslintrc" "#main.js#" "../" "./")
-
- ("/Users/gary_lai/Devlopment/" (22155 8800 0 0) "Rust/" "node/" "dummy.keystore" "distributor app/" "CxSAST.790.Release.Setup_7.9.0.286/" "Checkmarx/" ".DS_Store" "../" "./")
 
  ("/Users/gary_lai/Devlopment/Rust/dining_philosophers/src/" (22154 5360 0 0) "main.rs~" "main.rs" "../" "./")
 

@@ -54,7 +54,8 @@
  '(custom-safe-themes
    (quote
     ("98a619757483dc6614c266107ab6b19d315f93267e535ec89b7af3d62fb83cad" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(flycheck-eslintrc "0"))
+ '(flycheck-eslintrc "0")
+ '(js2-mode-show-parse-errors nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
