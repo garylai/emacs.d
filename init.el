@@ -23,6 +23,8 @@
     simple-httpd
     solarized-theme
     dash
+    tern
+    company-tern
     web-mode)
  "A list of packages to ensure are installed at lunch.")
 

@@ -40,9 +40,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/gary_lai/.emacs.d/" (22167 25890 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore~" ".gitignore" ".git/" "../" "./")
+ ("/Users/gary_lai/.emacs.d/" (22167 27060 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore~" ".gitignore" ".git/" "../" "./")
 
- ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22167 25900 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js~" "index.android.js" "common/" "android/" ".watchmanconfig" ".tern-port" ".gitignore" ".git/" ".flowconfig" ".#index.ios.js" "../" "./")
+ ("/Users/gary_lai/Devlopment/node/React-Native/" (22167 27505 0 0) "react-native-src/" "AwesomeProject/" ".tern-project~" ".tern-project" ".eslintrc" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22167 27202 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js~" "index.android.js" "common/" "android/" ".watchmanconfig" ".tern-port" ".gitignore" ".git/" ".flowconfig" "../" "./")
 
  ("/Users/gary_lai/" (22167 20671 0 0) "SOAC482.tmp" "SOAC3C6.tmp" "SOAC358.tmp" "SOAC25D.tmp" "selfProj/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".subversion/" ".profile" ".plugman/" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".lesshst" ".ionic/" ".gradle/" ".gitconfig" ".emacs~" ".emacs.d/" ".DS_Store" ".cups/" ".cordova/" ".config/" ".cocoapods/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
 
@@ -57,8 +59,6 @@
  ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/" (22163 32251 0 0) "UIExplorer/" "TicTacToe/" "Movies/" "2048/" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/" (22163 32443 0 0) "website/" "settings.gradle" "scripts/" "runXcodeTests.sh" "Releases.md" "README.md" "ReactAndroid/" "React.podspec" "react-native-cli/" "React/" "PATENTS" "packager/" "package.json" "npm-shrinkwrap.json" "node_modules/" "local-cli/" "LICENSE-examples" "LICENSE-docs" "LICENSE-CustomComponents" "LICENSE" "Libraries/" "JSCLegacyProfiler/" "jestSupport/" "IntegrationTests/" "gradlew.bat" "gradlew" "gradle/" "Examples/" "docs/" "CONTRIBUTING.md" "cli.js" "circle.yml" "build.gradle" "breaking-changes.md" "bots/" ".travis.yml" ".gitignore" ".gitattributes" ".git/" ".flowconfig" ".eslintrc" ".eslintignore" ".editorconfig" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/React-Native/" (22163 32339 0 0) "react-native-src/" "AwesomeProject/" ".eslintrc" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/" (22163 27910 0 0) "components/" "../" "./")
 
