@@ -1,6 +1,8 @@
 (require 'cl)
 (require 'package)
-
+;;; depends on racer(Rust): cargo install racer
+;;; depends on eslint(JS): npm install -g eslint
+;;; depends on tern(JS): npm install -g tern
 (defvar my-packages
   '(
     darktooth-theme
