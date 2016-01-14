@@ -2,8 +2,11 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/UIExplorer/" . "Navigator/")
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/" . "UIExplorer/")
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/" . "Examples/")
  ("/Users/gary_lai/Devlopment/" . "node/")
- ("/Users/gary_lai/Devlopment/node/React-Native/" . "AwesomeProject/")
+ ("/Users/gary_lai/Devlopment/node/React-Native/" . "react-native-src/")
  ("/Users/gary_lai/Devlopment/node/" . "React-Native/")
  ("/" . "Users/")
  ("/Users/" . "gary_lai/")
@@ -13,6 +16,8 @@
 ;; ----- ido-work-directory-list -----
 (
  "/Users/gary_lai/.emacs.d/"
+ "/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/UIExplorer/Navigator/"
+ "/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/Movies/"
  "/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/"
  "/Users/gary_lai/"
  "/Users/gary_lai/Documents/"
@@ -22,6 +27,8 @@
 ;; ----- ido-work-file-list -----
 (
  "init.el"
+ "NavigationBarSample.js"
+ "SearchScreen.js"
  "index.ios.js"
  ".emacs"
  ".bashrc"
@@ -29,23 +36,33 @@
  "CL.txt"
  ".eslintrc"
  "abc.txt"
- "#.bashrc#"
- ".bash_profile"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/gary_lai/.emacs.d/" (22163 27526 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore~" ".gitignore" ".git/" "../" "./")
+ ("/Users/gary_lai/.emacs.d/" (22167 25890 0 0) "init.el" "ido.last~" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".gitignore~" ".gitignore" ".git/" "../" "./")
 
- ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/components/" (22163 27524 0 0) "MainNavigation.js~" "MainNavigation.js" "AwesomeProject.js~" "AwesomeProject.js" "../" "./")
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22167 25900 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js~" "index.android.js" "common/" "android/" ".watchmanconfig" ".tern-port" ".gitignore" ".git/" ".flowconfig" ".#index.ios.js" "../" "./")
 
- ("/Users/gary_lai/" (22163 7187 0 0) "selfProj/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".subversion/" ".profile" ".plugman/" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".lesshst" ".ionic/" ".gradle/" ".gitconfig" ".emacs~" ".emacs.d/" ".DS_Store" ".cups/" ".cordova/" ".config/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
+ ("/Users/gary_lai/" (22167 20671 0 0) "SOAC482.tmp" "SOAC3C6.tmp" "SOAC358.tmp" "SOAC25D.tmp" "selfProj/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Devlopment/" "Desktop/" "Applications (Parallels)/" "Applications/" "AndroidStudioProjects/" ".viminfo" ".Trash/" ".subversion/" ".profile" ".plugman/" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".lesshst" ".ionic/" ".gradle/" ".gitconfig" ".emacs~" ".emacs.d/" ".DS_Store" ".cups/" ".cordova/" ".config/" ".cocoapods/" ".CFUserTextEncoding" ".cargo/" ".bashrc~" ".bashrc" ".bash_profile~" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" ".account" "#.bashrc#~" "#*message*-20151228-162846#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/components/" (22167 14380 0 0) "MovieListView.js~" "MovieListView.js" "MainNavigation.js~" "MainNavigation.js" "DetailView.js~" "DetailView.js" "AwesomeProject.js~" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/UIExplorer/Navigator/" (22166 1829 0 0) "NavigatorExample.js" "NavigationBarSample.js" "JumpingNavSample.js" "BreadcrumbNavSample.js" ".#NavigatorExample.js" "#NavigatorExample.js#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/UIExplorer/" (22163 32251 0 0) "XHRExampleHeaders.js" "XHRExampleFetch.js" "XHRExampleCookies.js" "XHRExample.ios.js" "XHRExample.android.js" "WebViewExample.js" "ViewPagerAndroidExample.android.js" "ViewExample.js" "VibrationIOSExample.js" "UIExplorerUnitTests/" "UIExplorerTitle.js" "UIExplorerPage.js" "UIExplorerListBase.js" "UIExplorerList.ios.js" "UIExplorerList.android.js" "UIExplorerIntegrationTests/" "UIExplorerButton.js" "UIExplorerBlock.js" "UIExplorerApp.ios.js" "UIExplorerApp.android.js" "UIExplorer.xcodeproj/" "UIExplorer/" "uie_thumb_big.png" "TransparentHitTestExample.js" "TransformExample.js" "TouchableExample.js" "ToolbarAndroidExample.android.js" "ToastAndroidExample.android.js" "TimerExample.js" "Thumbnails/" "TextInputExample.ios.js" "TextInputExample.android.js" "TextExample.ios.js" "TextExample.android.js" "TabBarIOSExample.js" "SwitchIOSExample.js" "SwitchAndroidExample.android.js" "StatusBarIOSExample.js" "SliderIOSExample.js" "slider@2x.png" "slider.png" "slider-right@2x.png" "slider-right.png" "slider-left@2x.png" "slider-left.png" "SetPropertiesExampleApp.js" "SegmentedControlIOSExample.js" "ScrollViewSimpleExample.js" "ScrollViewExample.js" "RefreshControlExample.js" "README.md" "RCTRootViewIOSExample.js" "PushNotificationIOSExample.js" "PullToRefreshViewAndroidExample.android.js" "ProgressViewIOSExample.js" "ProgressBarAndroidExample.android.js" "PointerEventsExample.js" "PickerIOSExample.js" "PanResponderExample.js" "NetInfoExample.js" "NavigatorIOSExample.js" "NavigatorIOSColorsExample.js" "Navigator/" "ModalExample.js" "MapViewExample.js" "ListViewPagingExample.js" "ListViewGridLayoutExample.js" "ListViewExample.js" "LayoutExample.js" "LayoutEventsExample.js" "IntentAndroidExample.android.js" "ImageExample.js" "ImageEditingExample.js" "ImageCapInsetsExample.js" "hawk.png" "GeolocationExample.js" "flux@3x.png" "ExampleTypes.js" "DatePickerIOSExample.js" "createExamplePage.js" "ClipboardExample.js" "CameraRollView.ios.js" "CameraRollExample.ios.js" "bunny.png" "BorderExample.js" "AsyncStorageExample.js" "AssetScaledImageExample.js" "AppStateIOSExample.js" "AnimatedGratuitousApp/" "AnimatedExample.js" "android/" "AlertIOSExample.js" "AlertExample.js" "AdSupportIOSExample.js" "ActivityIndicatorIOSExample.js" "ActionSheetIOSExample.js" "AccessibilityIOSExample.js" "AccessibilityAndroidExample.android.js" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/Movies/" (22163 33124 0 0) "SearchScreen.js" "SearchBar.ios.js" "SearchBar.android.js" "README.md" "MovieScreen.js" "MoviesApp.ios.js" "MoviesApp.android.js" "Movies.xcodeproj/" "Movies/" "MovieCell.js" "getTextFromScore.js" "getStyleFromScore.js" "getImageSource.js" "android/" "__tests__/" ".#SearchScreen.js" "#SearchScreen.js#" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/Examples/" (22163 32251 0 0) "UIExplorer/" "TicTacToe/" "Movies/" "2048/" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/react-native-src/" (22163 32443 0 0) "website/" "settings.gradle" "scripts/" "runXcodeTests.sh" "Releases.md" "README.md" "ReactAndroid/" "React.podspec" "react-native-cli/" "React/" "PATENTS" "packager/" "package.json" "npm-shrinkwrap.json" "node_modules/" "local-cli/" "LICENSE-examples" "LICENSE-docs" "LICENSE-CustomComponents" "LICENSE" "Libraries/" "JSCLegacyProfiler/" "jestSupport/" "IntegrationTests/" "gradlew.bat" "gradlew" "gradle/" "Examples/" "docs/" "CONTRIBUTING.md" "cli.js" "circle.yml" "build.gradle" "breaking-changes.md" "bots/" ".travis.yml" ".gitignore" ".gitattributes" ".git/" ".flowconfig" ".eslintrc" ".eslintignore" ".editorconfig" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/" (22163 32339 0 0) "react-native-src/" "AwesomeProject/" ".eslintrc" "../" "./")
+
+ ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/" (22163 27910 0 0) "components/" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/" (22163 7155 0 0) "React-Native/" "React/" "ionic/" ".DS_Store" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/" (22163 26381 0 0) "package.json~" "package.json" "node_modules/" "ios/" "index.ios.js~" "index.ios.js" "index.android.js~" "index.android.js" "common/" "android/" ".watchmanconfig" ".gitignore" ".flowconfig" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/common/" (22159 10056 0 0) "components/" "../" "./")
 
  ("/Users/gary_lai/selfProj/node/" (22159 29763 0 0) "mobi-comic-gen/" "../" "./")
 
@@ -64,8 +81,6 @@
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/" (22158 13742 0 0) "settings.gradle" "gradlew.bat" "gradlew" "gradle.properties" "gradle/" "components/" "build.gradle" "build/" "app/" ".gradle/" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React-Native/AwesomeProject/android/components/" (22158 14181 0 0) "AwesomeProject.android.js" "../" "./")
-
- ("/Users/gary_lai/Devlopment/node/React-Native/" (22158 2067 0 0) "AwesomeProject/" ".eslintrc" "../" "./")
 
  ("/Users/gary_lai/Devlopment/node/React/react-tutorial-master/public/scripts/" (22157 50792 0 0) "test.js~" "test.jsx~" "test.js" "example.js~" "example.js" ".DS_Store" ".#test.js" "../" "./")
 

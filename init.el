@@ -111,6 +111,14 @@
 (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
 (add-hook 'js2-mode-hook #'linum-mode)
 (setq js2-highlight-level 3)
+(add-hook 'js2-mode-hook #'company-mode)
+;;;tern
+(require 'tern)
+(eval-after-load 'company
+  '(add-hook 'js2-mode-hook #'tern-mode))
+
+(require'company-tern)
+(add-to-list 'company-backends 'company-tern)
 
 (require 'flycheck)
 (add-hook 'js2-mode-hook #'flycheck-mode)
