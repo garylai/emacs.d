@@ -137,3 +137,4 @@
 (xclip-mode 1)
 
 (projectile-global-mode)
+(setq projectile-switch-project-action 'neotree-projectile-action)
