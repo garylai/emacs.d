@@ -27,6 +27,7 @@
     dash
     tern
     company-tern
+    projectile
     web-mode)
  "A list of packages to ensure are installed at lunch.")
 
@@ -134,3 +135,5 @@
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (xclip-mode 1)
+
+(projectile-global-mode)
