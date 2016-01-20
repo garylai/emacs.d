@@ -104,11 +104,12 @@
 (add-hook 'racer-mode-hook #'company-mode)
 
 (require 'company)
-(defun company-tab-binding ()
-  "TAB to enable company."
-  (global-set-key (kbd "TAB") #'company-indent-or-complete-common))
+;; (defun company-tab-binding ()
+;;   "TAB to enable company."
+  (define-key company-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+  ;; )
 
-(add-hook 'company-mode-hook 'company-tab-binding)
+;; (add-hook 'company-mode-hook 'company-tab-binding)
 (setq company-tooltip-align-annotations t)
 ;;JS
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -138,3 +139,29 @@
 
 (projectile-global-mode)
 (setq projectile-switch-project-action 'neotree-projectile-action)
+
+;; backups
+(setq
+ vc-make-backup-files t ;; backup version controlled files too.
+ version-control t     ;; Use version numbers for backups.
+ kept-new-versions 5  ;; Number of newest versions to keep.
+ kept-old-versions 0   ;; Number of oldest versions to keep.
+ delete-old-versions t ;; Don't ask to delete excess backup versions.
+ backup-by-copying t  ;; Copy all files, don't rename them.
+ backup-directory-alist '(("" . "~/.emacs.d/backup")) ;; save backup to other directory 
+ ) 
+
+(defun force-backup-of-buffer ()
+  ;; Make a special "per session" backup at the first save of each
+  ;; emacs session.
+  (when (not buffer-backed-up)
+    ;; Override the default parameters for per-session backups.
+    (let ((backup-directory-alist '(("" . "~/.emacs.d/backup/per-session")))
+          (kept-new-versions 3))
+      (backup-buffer)))
+  ;; Make a "per save" backup on each save.  The first save results in
+  ;; both a per-session and a per-save backup, to keep the numbering
+  ;; of per-save backups consistent.
+  (let ((buffer-backed-up nil))
+    (backup-buffer)))
+(add-hook 'before-save-hook  'force-backup-of-buffer)
