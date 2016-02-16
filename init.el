@@ -165,3 +165,7 @@
   (let ((buffer-backed-up nil))
     (backup-buffer)))
 (add-hook 'before-save-hook  'force-backup-of-buffer)
+
+(defun start-flyspell-mode ()
+  (flyspell-mode 1))
+(add-hook 'text-mode-hook 'start-flyspell-mode)
