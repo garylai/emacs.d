@@ -169,3 +169,4 @@
 (defun start-flyspell-mode ()
   (flyspell-mode 1))
 (add-hook 'text-mode-hook 'start-flyspell-mode)
+(setq-default js2-global-externs '("define" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
