@@ -131,8 +131,8 @@
 (setq-default flycheck-disabled-checkers
 	      (append flycheck-disabled-checkers
 		          '(javascript-jshint)))
-(setq flycheck-eslintrc "~/.eslintrc")
-(setq-default js2-global-externs '("define" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
+;; (setq flycheck-eslintrc "~/.eslintrc")
+(setq-default js2-global-externs '("describe" "context" "it" "define" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
 ;; use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
 
