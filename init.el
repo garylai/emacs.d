@@ -172,3 +172,9 @@
   (flyspell-mode 1)
   (visual-line-mode))
 (add-hook 'text-mode-hook 'start-flyspell-mode)
+
+;; docker
+;; git clone https://github.com/spotify/dockerfile-mode.git
+(add-to-list 'load-path "~/.emacs.d/plugins/dockerfile-mode")
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
