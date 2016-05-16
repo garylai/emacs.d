@@ -169,5 +169,6 @@
 
 ;; text editing
 (defun start-flyspell-mode ()
-  (flyspell-mode 1))
+  (flyspell-mode 1)
+  (visual-line-mode))
 (add-hook 'text-mode-hook 'start-flyspell-mode)
