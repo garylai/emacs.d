@@ -134,7 +134,7 @@
 ;; (setq flycheck-eslintrc "~/.eslintrc")
 (setq-default js2-global-externs '("describe" "context" "it" "define" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
 ;; use eslint with web-mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'js2-mode)
+;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (xclip-mode 1)
 
