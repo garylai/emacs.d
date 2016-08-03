@@ -77,6 +77,7 @@
 ;; indent related
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq-default js2-basic-offset 2)
 (setq indent-line-function 'tab-to-tab-stop)
 (setq tab-stop-list (number-sequence 4 120 4))
 (require 'js2-mode)
