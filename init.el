@@ -116,7 +116,6 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
-(add-hook 'js2-mode-hook #'linum-mode)
 (setq js2-highlight-level 3)
 (add-hook 'js2-mode-hook #'company-mode)
 ;;;tern
@@ -179,3 +178,8 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/dockerfile-mode")
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+;; linum-mode
+(setq linum-format "%4d \u2502 ")
+(add-hook 'js2-mode-hook #'linum-mode)
+(add-hook 'sh-mode-hook #'linum-mode)
