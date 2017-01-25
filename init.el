@@ -76,8 +76,8 @@
 (global-set-key (kbd "C-c /") #'toggle-comment-on-line)
 ;; indent related
 (setq-default indent-tabs-mode nil)
+(setq js2-indent-switch-body t)
 (setq-default tab-width 4)
-(setq-default js2-basic-offset 2)
 (setq indent-line-function 'tab-to-tab-stop)
 (setq tab-stop-list (number-sequence 4 120 4))
 (require 'js2-mode)
