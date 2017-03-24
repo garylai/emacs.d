@@ -7,6 +7,7 @@
   '(
     darktooth-theme
     js2-mode
+    js-doc
     company
     xclip
     flycheck
@@ -28,7 +29,8 @@
     tern
     company-tern
     projectile
-    web-mode)
+    web-mode
+    toml-mode)
  "A list of packages to ensure are installed at lunch.")
 
 (add-to-list 'package-archives
@@ -118,6 +120,15 @@
 (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
 (setq js2-highlight-level 3)
 (add-hook 'js2-mode-hook #'company-mode)
+(setq js-doc-mail-address "gary.lai@infinitus-int.com"
+      js-doc-author (format "GaryLai <%s>" js-doc-mail-address)
+      js-doc-url "url of your website"
+       js-doc-license "license name")
+
+ (add-hook 'js2-mode-hook
+           #'(lambda ()
+               (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+               (define-key js2-mode-map "@" 'js-doc-insert-tag)))
 ;;;tern
 (require 'tern)
 (eval-after-load 'company
@@ -183,3 +194,4 @@
 (setq linum-format "%4d \u2502 ")
 (add-hook 'js2-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
+
