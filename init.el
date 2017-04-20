@@ -31,7 +31,11 @@
     projectile
     web-mode
     toml-mode)
- "A list of packages to ensure are installed at lunch.")
+  "A list of packages to ensure are installed at lunch.")
+
+(add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
