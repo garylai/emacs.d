@@ -5,33 +5,35 @@
 ;;; depends on tern(JS): npm install -g tern
 (defvar my-packages
   '(
-    darktooth-theme
-    js2-mode
-    js-doc
     company
-    xclip
+    company-tern
+    darktooth-theme
+    dash
+    dash-functional
+    dockerfile-mode
+    epl
     flycheck
+    js-doc
+    js2-mode
+    json-mode
     json-reformat
     json-snatcher
     let-alist
     neotree
     pkg-info
-    epl
     popup
+    projectile
     racer
-    s
-    dash
+    rjsx-mode
     rust-mode
+    s
     seq
     simple-httpd
     solarized-theme
-    dash
     tern
-    company-tern
-    projectile
-    web-mode
     toml-mode
-    rjsx-mode)
+    web-mode
+    xclip)
   "A list of packages to ensure are installed at lunch.")
 
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
