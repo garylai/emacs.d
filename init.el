@@ -30,7 +30,8 @@
     company-tern
     projectile
     web-mode
-    toml-mode)
+    toml-mode
+    rjsx-mode)
   "A list of packages to ensure are installed at lunch.")
 
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
@@ -121,7 +122,7 @@
 ;;JS
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
 (setq js2-highlight-level 3)
 (add-hook 'js2-mode-hook #'company-mode)
 (setq js-doc-mail-address "gary.lai@infinitus-int.com"
