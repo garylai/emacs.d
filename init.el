@@ -202,3 +202,14 @@
 (add-hook 'js2-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
 
+ 
+(defun my/use-eslint-from-node-modules ()
+  (let ((root (locate-dominating-file
+               (or (buffer-file-name) default-directory)
+               (lambda (dir)
+                 (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" dir)))
+                  (and eslint (file-executable-p eslint)))))))
+    (when root
+      (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" root)))
+        (setq-local flycheck-javascript-eslint-executable eslint)))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
