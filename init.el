@@ -86,9 +86,10 @@
 ;; indent related
 (setq-default indent-tabs-mode nil)
 (setq js2-indent-switch-body t)
-(setq-default tab-width 4)
+(setq js-indent-level 2)
+(setq-default tab-width 2)
 (setq indent-line-function 'tab-to-tab-stop)
-(setq tab-stop-list (number-sequence 4 120 4))
+(setq tab-stop-list (number-sequence 2 120 2))
 (require 'js2-mode)
 (defun js2-mode-hook-fn ()
   "To force add a TAB."
