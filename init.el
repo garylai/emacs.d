@@ -33,7 +33,8 @@
     tern
     toml-mode
     web-mode
-    xclip)
+    xclip
+    xah-find)
   "A list of packages to ensure are installed at lunch.")
 
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
@@ -69,7 +70,10 @@
    (quote
     ("98a619757483dc6614c266107ab6b19d315f93267e535ec89b7af3d62fb83cad" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(flycheck-eslintrc "0")
- '(js2-mode-show-parse-errors nil))
+ '(js2-mode-show-parse-errors nil)
+ '(package-selected-packages
+   (quote
+    (xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
