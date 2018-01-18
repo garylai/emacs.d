@@ -218,3 +218,4 @@
       (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" root)))
         (setq-local flycheck-javascript-eslint-executable eslint)))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+(setq-default js2-strict-trailing-comma-warning nil) 
