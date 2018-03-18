@@ -34,8 +34,11 @@
     toml-mode
     web-mode
     xclip
-    xah-find)
-  "A list of packages to ensure are installed at lunch.")
+    xah-find
+    terraform-mode
+    company-terraform
+    )
+  "A list of packages to ensure are installed at launch.")
 
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
 (require 'dockerfile-mode)
@@ -79,7 +82,7 @@
  '(js2-mode-show-parse-errors nil)
  '(package-selected-packages
    (quote
-    (xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
+    (company-terraform terraform-mode xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -213,3 +216,8 @@
 (add-hook 'sh-mode-hook #'linum-mode)
 
 (put 'upcase-region 'disabled nil)
+
+;; terraform
+(require 'company-terraform)
+(company-terraform-init)
+
