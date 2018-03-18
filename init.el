@@ -206,3 +206,4 @@
 (add-hook 'js2-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
 
+(put 'upcase-region 'disabled nil)
