@@ -91,6 +91,7 @@
 (setq-default indent-tabs-mode nil)
 (setq js2-indent-switch-body t)
 (setq js-indent-level 2)
+(setq js-switch-indent-offset 2)
 (setq-default tab-width 2)
 (setq indent-line-function 'tab-to-tab-stop)
 (setq tab-stop-list (number-sequence 2 120 2))
@@ -207,15 +208,16 @@
 (add-hook 'js2-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
 
- 
-(defun my/use-eslint-from-node-modules ()
-  (let ((root (locate-dominating-file
-               (or (buffer-file-name) default-directory)
-               (lambda (dir)
-                 (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" dir)))
-                  (and eslint (file-executable-p eslint)))))))
-    (when root
-      (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" root)))
-        (setq-local flycheck-javascript-eslint-executable eslint)))))
-(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 (setq-default js2-strict-trailing-comma-warning nil) 
+;; (defun my/use-eslint-from-node-modules ()
+;;   (let ((root (locate-dominating-file
+;;                (or (buffer-file-name) default-directory)
+;;                (lambda (dir)
+;;                  (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" dir)))
+;;                   (and eslint (file-executable-p eslint)))))))
+;;     (when root
+;;       (let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" root)))
+;;         (setq-local flycheck-javascript-eslint-executable eslint)))))
+;; (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+(put 'upcase-region 'disabled nil)
+
