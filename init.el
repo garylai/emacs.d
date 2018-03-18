@@ -34,8 +34,11 @@
     toml-mode
     web-mode
     xclip
-    xah-find)
-  "A list of packages to ensure are installed at lunch.")
+    xah-find
+    terraform-mode
+    company-terraform
+    )
+  "A list of packages to ensure are installed at launch.")
 
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
 (require 'dockerfile-mode)
@@ -70,10 +73,17 @@
    (quote
     ("98a619757483dc6614c266107ab6b19d315f93267e535ec89b7af3d62fb83cad" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(flycheck-eslintrc "0")
+ '(grep-find-ignored-directories
+   (quote
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "node_modules")))
+ '(grep-find-ignored-files
+   (quote
+    (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo")))
  '(js2-mode-show-parse-errors nil)
  '(package-selected-packages
    (quote
-    (xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
+    (company-terraform terraform-mode xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -208,6 +218,7 @@
 (add-hook 'js2-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
 
+
 (setq-default js2-strict-trailing-comma-warning nil) 
 ;; (defun my/use-eslint-from-node-modules ()
 ;;   (let ((root (locate-dominating-file
@@ -220,4 +231,8 @@
 ;;         (setq-local flycheck-javascript-eslint-executable eslint)))))
 ;; (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 (put 'upcase-region 'disabled nil)
+
+;; terraform
+(require 'company-terraform)
+(company-terraform-init)
 
