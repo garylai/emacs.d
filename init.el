@@ -105,6 +105,12 @@
 (setq-default tab-width 2)
 (setq indent-line-function 'tab-to-tab-stop)
 (setq tab-stop-list (number-sequence 2 120 2))
+(setq
+     web-mode-code-indent-offset 2
+     web-mode-css-indent-offset 2
+     web-mode-markup-indent-offset 2
+     web-mode-enable-auto-quoting nil)
+
 (require 'js2-mode)
 (defun js2-mode-hook-fn ()
   "To force add a TAB."
@@ -138,11 +144,13 @@
 ;; (add-hook 'company-mode-hook 'company-tab-binding)
 (setq company-tooltip-align-annotations t)
 ;;JS
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
 (setq js2-highlight-level 3)
 (add-hook 'js2-mode-hook #'company-mode)
+(add-hook 'web-mode-hook #'company-mode)
+
 (setq js-doc-mail-address "gary.lai@infinitus-int.com"
       js-doc-author (format "GaryLai <%s>" js-doc-mail-address)
       js-doc-url "url of your website"
@@ -156,12 +164,15 @@
 (require 'tern)
 (eval-after-load 'company
   '(add-hook 'js2-mode-hook #'tern-mode))
+(eval-after-load 'company
+  '(add-hook 'web-mode-hook #'tern-mode))
 
 (require'company-tern)
 (add-to-list 'company-backends 'company-tern)
 
 (require 'flycheck)
 (add-hook 'js2-mode-hook #'flycheck-mode)
+(add-hook 'web-mode-hook #'flycheck-mode)
 (setq-default flycheck-disabled-checkers
 	      (append flycheck-disabled-checkers
 		          '(javascript-jshint)))
@@ -216,6 +227,7 @@
 ;; linum-mode
 (setq linum-format "%4d \u2502 ")
 (add-hook 'js2-mode-hook #'linum-mode)
+(add-hook 'web-mode-hook #'linum-mode)
 (add-hook 'sh-mode-hook #'linum-mode)
 
 
@@ -236,3 +248,16 @@
 (require 'company-terraform)
 (company-terraform-init)
 
+;;web-mode
+(with-eval-after-load 'web-mode
+  (setf (cdr (assoc "lineup-args" web-mode-indentation-params)) nil)
+  (setf (cdr (assoc "lineup-concats" web-mode-indentation-params)) nil)
+  (setf (cdr (assoc "lineup-calls" web-mode-indentation-params)) nil)
+  (setf (cdr (assoc "lineup-ternary" web-mode-indentation-params)) nil)
+  (add-to-list 'web-mode-content-types '("javascript" . "\\.es6\\'"))
+  (add-to-list 'web-mode-content-types '("jsx" . "\\.jsx?\\'"))
+ )
+(with-eval-after-load 'flycheck
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-add-mode 'javascript-jshint 'web-mode)
+  (flycheck-add-mode 'javascript-standard 'web-mode))
