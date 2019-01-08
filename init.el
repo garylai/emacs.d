@@ -40,9 +40,19 @@
     )
   "A list of packages to ensure are installed at launch.")
 
+(load-file "~/.emacs.d/third_party_mode/flow-for-emacs/flow.el")
 (add-to-list 'load-path "~/.emacs.d/third_party_mode/dockerfile-mode-master/")
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+(add-to-list 'load-path "~/.emacs.d/third_party_mode/Highlight-Indentation-for-Emacs-master/")
+
+(load "highlight-indentation")
+(add-hook 'web-mode-hook #'highlight-indentation-current-column-mode)
+(add-hook 'web-mode-hook #'highlight-indentation-mode)
+(add-hook 'yaml-mode-hook #'highlight-indentation-current-column-mode)
+(add-hook 'yaml-mode-hook #'highlight-indentation-mode)
+(add-hook 'yaml-mode-hook #'flycheck-mode)
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
@@ -82,7 +92,7 @@
  '(js2-mode-show-parse-errors nil)
  '(package-selected-packages
    (quote
-    (company-terraform terraform-mode xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
+    (flycheck-flow flymd markdown-mode yaml-mode company-terraform terraform-mode xah-find xclip web-mode toml-mode solarized-theme simple-httpd rjsx-mode racer projectile popup neotree json-mode js-doc flycheck dockerfile-mode darktooth-theme company-tern))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -146,7 +156,7 @@
 ;;JS
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
-;; (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (setq js2-highlight-level 3)
 (add-hook 'js2-mode-hook #'company-mode)
 (add-hook 'web-mode-hook #'company-mode)
@@ -170,7 +180,9 @@
 (require'company-tern)
 (add-to-list 'company-backends 'company-tern)
 
+(require 'flycheck-flow)
 (require 'flycheck)
+(add-hook 'sh-mode-hook #'flycheck-mode)
 (add-hook 'js2-mode-hook #'flycheck-mode)
 (add-hook 'web-mode-hook #'flycheck-mode)
 (setq-default flycheck-disabled-checkers
@@ -225,10 +237,10 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 ;; linum-mode
-(setq linum-format "%4d \u2502 ")
-(add-hook 'js2-mode-hook #'linum-mode)
-(add-hook 'web-mode-hook #'linum-mode)
-(add-hook 'sh-mode-hook #'linum-mode)
+;; (setq linum-format "%4d \u2502 ")
+;; (add-hook 'js2-mode-hook #'linum-mode)
+;; (add-hook 'web-mode-hook #'linum-mode)
+;; (add-hook 'sh-mode-hook #'linum-mode)
 
 
 (setq-default js2-strict-trailing-comma-warning nil) 
@@ -249,6 +261,12 @@
 (company-terraform-init)
 
 ;;web-mode
+(add-hook 'web-mode-hook #'hs-minor-mode)
+(defun hs-minor-mode-hook-fn ()
+  (define-key hs-minor-mode-map (kbd "C-c C-e") #'hs-hide-block)
+  (define-key hs-minor-mode-map (kbd "C-c C-o") #'hs-show-block))
+(add-hook 'hs-minor-mode-hook 'hs-minor-mode-hook-fn)
+
 (with-eval-after-load 'web-mode
   (setf (cdr (assoc "lineup-args" web-mode-indentation-params)) nil)
   (setf (cdr (assoc "lineup-concats" web-mode-indentation-params)) nil)
@@ -256,8 +274,30 @@
   (setf (cdr (assoc "lineup-ternary" web-mode-indentation-params)) nil)
   (add-to-list 'web-mode-content-types '("javascript" . "\\.es6\\'"))
   (add-to-list 'web-mode-content-types '("jsx" . "\\.jsx?\\'"))
- )
+  )
 (with-eval-after-load 'flycheck
   (flycheck-add-mode 'javascript-eslint 'web-mode)
   (flycheck-add-mode 'javascript-jshint 'web-mode)
+  (flycheck-add-mode 'javascript-flow 'web-mode)
   (flycheck-add-mode 'javascript-standard 'web-mode))
+
+
+(defun my-flymd-browser-function (url)
+  (let ((process-environment (browse-url-process-environment)))
+    (apply 'start-process
+           (concat "firefox " url)
+           nil
+           "/usr/bin/open"
+           (list "-a" "firefox" url))))
+(setq flymd-browser-open-function 'my-flymd-browser-function)
+
+(defun aj-toggle-fold ()
+  "Toggle fold all lines larger than indentation on current line"
+  (interactive)
+  (let ((col 1))
+    (save-excursion
+      (back-to-indentation)
+      (setq col (+ 1 (current-column)))
+      (set-selective-display
+       (if selective-display nil (or col 1))))))
+(global-set-key (kbd "C-c f") 'aj-toggle-fold)
