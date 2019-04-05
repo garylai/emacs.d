@@ -1,2 +1,4 @@
 elpa/
 *~
+straight/
+.DS_Store

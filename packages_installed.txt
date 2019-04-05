@@ -1,0 +1,6 @@
+0blayout company-tern company-terraform company darktooth-theme autothemer dash-functional dockerfile-mode flycheck-flow flycheck flymd js-doc json-mode json-reformat json-snatcher markdown-mode neotree paredit popup projectile pkg-info epl racer f rainbow-delimiters rjsx-mode js2-mode rust-mode s simple-httpd solarized-theme dash tern terraform-mode hcl-mode toml-mode web-mode xah-find xclip yaml-mode
+
+;;; depends on racer(Rust): cargo install racer
+;;; depends on eslint(JS): npm install -g eslint
+;;; depends on tern(JS): npm install -g tern
+
