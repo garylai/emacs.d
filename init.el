@@ -22,76 +22,9 @@
 (straight-use-package 'dash-functional)
 (straight-use-package 'epl)
 
-(use-package ido
-  :straight t
-  :config
-  (ido-mode 1)
-  (setq ido-decorations
-	(quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
-  )
+(add-to-list 'load-path "./configs")
 
-(use-package xclip
-  :straight t
-  :config
-  (xclip-mode 1))
-
-(use-package darktooth-theme
-  :straight t
-  :config
-  (load-theme 'darktooth t))
-
-(use-package projectile
-  :straight t
-  :config
-  (projectile-global-mode)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
-  :bind (:map projectile-mode-map
-	 ("C-c p" . projectile-command-map)))
-
-(use-package neotree
-  :straight t
-  :bind ([f8] . neotree-toggle)
-  :config (setq neo-autorefresh nil))
-
-;; JS
-(use-package web-mode
-  :straight t
-  :mode (("\\.js$" . web-mode)
-	 ("\\.jsx$" . web-mode))
-  :hook
-  (web-mode . show-paren-mode)
-  :init
-  (setq 
-     web-mode-code-indent-offset 2
-     web-mode-css-indent-offset 2
-     web-mode-markup-indent-offset 2
-     web-mode-enable-auto-quoting nil)
-  )
-
-;; company
-(use-package company
-  :straight t
-  :hook
-  ((web-mode emacs-lisp-mode lisp-interaction) . company-mode)
-  :config
-  (setq company-tooltip-align-annotations t)
-  :bind (
-	 :map company-mode-map
-	 ([tab] . company-indent-or-complete-common)
-	 )
-  )
-
-;; elisp
-(add-hook 'emacs-lisp-mode-hook #'show-paren-mode)
-
-(use-package paredit
-  :straight t
-  :hook
-  ((emacs-lisp-mode lisp-interaction-mode) . paredit-mode)
-  )
-
-(use-package rainbow-delimiters
-  :straight t
-  :hook
-  ((emacs-lisp-mode lisp-interaction-mode) . rainbow-delimiters-mode)
-  )
+(use-package general-config)
+(use-package navigation-config)
+(use-package js-config)
+(use-package elisp-config)
