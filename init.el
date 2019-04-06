@@ -30,3 +30,4 @@
 (use-package yaml-config)
 (use-package rust-config)
 (use-package text-config)
+(use-package terraform-config)
