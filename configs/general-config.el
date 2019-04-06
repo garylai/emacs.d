@@ -1,6 +1,18 @@
 (eval-when-compile
   (require 'use-package))
 
+;; Display buffer full path on title
+
+(defun xterm-title-update ()
+    (interactive)
+    (send-string-to-terminal (concat "\033]1; " (buffer-name) "\007"))
+    (if buffer-file-name
+        (let ((relative-path (file-relative-name (buffer-file-name) (projectile-project-root))))
+          (message relative-path)
+          (send-string-to-terminal (concat "\033]2; " relative-path "\007")))))
+   
+(add-hook 'post-command-hook 'xterm-title-update)
+
 ;; code fold
 (defun toggle-fold ()
   "Toggle fold all lines larger than indentation on current line"
