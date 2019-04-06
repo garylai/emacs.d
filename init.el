@@ -31,3 +31,4 @@
 (use-package rust-config)
 (use-package text-config)
 (use-package terraform-config)
+(use-package md-config)
