@@ -1,6 +1,10 @@
 (eval-when-compile
   (require 'use-package))
 
+ ;; shift arrow to move between windows
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 (use-package projectile
   :straight t
   :init

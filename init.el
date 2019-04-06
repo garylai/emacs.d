@@ -13,10 +13,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
- ;; shift arrow to move between windows
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
-
 (straight-use-package 'use-package)
 (straight-use-package 'dash)
 (straight-use-package 'dash-functional)
