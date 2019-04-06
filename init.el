@@ -25,6 +25,7 @@
 (add-to-list 'load-path (concat user-emacs-directory
         (convert-standard-filename "configs")))
 
+(use-package backup-config)
 (use-package general-config)
 (use-package dockerfile-config)
 (use-package navigation-config)
