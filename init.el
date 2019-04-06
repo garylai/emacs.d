@@ -31,3 +31,4 @@
 (use-package js-config)
 (use-package elisp-config)
 (use-package yaml-config)
+(use-package rust-config)
