@@ -32,19 +32,10 @@
 )
 
 (use-package flycheck-flow
-  :straight t)
-
-(use-package flycheck
-  :requires flycheck-flow
   :straight t
+  :after flycheck
   :config
-  (setq flycheck-eslintrc "0")
-  (setq-default flycheck-disabled-checkers
-  		(append flycheck-disabled-checkers
-  			'(javascript-jshint)))
-  (flycheck-add-mode 'javascript-eslint 'web-mode)
   (flycheck-add-mode 'javascript-flow 'web-mode)
-  :hook ((sh-mode web-mode) . flycheck-mode)
   )
 
 (provide 'js-config)

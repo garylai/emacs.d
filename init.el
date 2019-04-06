@@ -30,3 +30,4 @@
 (use-package navigation-config)
 (use-package js-config)
 (use-package elisp-config)
+(use-package yaml-config)

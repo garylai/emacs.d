@@ -44,9 +44,20 @@
 			 :host github
 			 :repo "antonj/Highlight-Indentation-for-Emacs")
 	      :hook (
-		     ((web-mode) . highlight-indentation-current-column-mode)
-		     ((web-mode) . highlight-indentation-mode)
+		     ((web-mode yaml-mode) . highlight-indentation-current-column-mode)
+		     ((web-mode yaml-mode) . highlight-indentation-mode)
 		     )
 	      )
+;; flycheck
+(use-package flycheck
+  :straight t
+  :config
+  (setq flycheck-eslintrc "0")
+  (setq-default flycheck-disabled-checkers
+  		(append flycheck-disabled-checkers
+  			'(javascript-jshint)))
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  :hook ((sh-mode web-mode yaml-mode) . flycheck-mode)
+  )
 
 (provide 'general-config)
