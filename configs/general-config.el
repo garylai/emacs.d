@@ -1,6 +1,9 @@
 (eval-when-compile
   (require 'use-package))
 
+;; don't insert tabs
+(setq-default indent-tabs-mode nil)
+
 (use-package ido
   :straight t
   :config
