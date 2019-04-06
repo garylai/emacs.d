@@ -26,6 +26,7 @@
         (convert-standard-filename "configs")))
 
 (use-package general-config)
+(use-package dockerfile-config)
 (use-package navigation-config)
 (use-package js-config)
 (use-package elisp-config)
