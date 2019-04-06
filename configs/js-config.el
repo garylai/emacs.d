@@ -9,6 +9,11 @@
 	 ("\\.jsx$" . web-mode))
   :hook
   (web-mode . show-paren-mode)
+  :config
+  (setcdr (assoc "lineup-args" web-mode-indentation-params) nil)
+  (setcdr (assoc "lineup-concats" web-mode-indentation-params) nil)
+  (setcdr (assoc "lineup-calls" web-mode-indentation-params) nil)
+  (setcdr (assoc "lineup-ternary" web-mode-indentation-params) nil)
   :init
   (setq 
      web-mode-code-indent-offset 2
