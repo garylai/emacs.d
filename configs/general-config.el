@@ -37,4 +37,16 @@
 	 )
   )
 
+;; highlight indentation
+(use-package Highlight-Indentation-for-Emacs
+	      :straight (Highlight-Indentation-for-Emacs
+			 :type git
+			 :host github
+			 :repo "antonj/Highlight-Indentation-for-Emacs")
+	      :hook (
+		     ((web-mode) . highlight-indentation-current-column-mode)
+		     ((web-mode) . highlight-indentation-mode)
+		     )
+	      )
+
 (provide 'general-config)
