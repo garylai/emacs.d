@@ -30,7 +30,7 @@
   (setq company-tooltip-align-annotations t)
   :bind (
 	 :map company-mode-map
-	 ([tab] . company-indent-or-complete-common)
+	 ([?\t] . company-indent-or-complete-common)
 	 )
   )
 

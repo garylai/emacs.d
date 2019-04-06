@@ -19,4 +19,32 @@
   :straight t
   :mode ("\\.json$" . json-mode))
 
+(use-package tern
+  :straight t
+  :hook (web-mode . tern-mode)
+  )
+
+(use-package company-tern
+    :straight t
+    :after company
+    :init
+    (add-to-list 'company-backends 'company-tern)
+)
+
+(use-package flycheck-flow
+  :straight t)
+
+(use-package flycheck
+  :requires flycheck-flow
+  :straight t
+  :config
+  (setq flycheck-eslintrc "0")
+  (setq-default flycheck-disabled-checkers
+  		(append flycheck-disabled-checkers
+  			'(javascript-jshint)))
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-add-mode 'javascript-flow 'web-mode)
+  :hook ((sh-mode web-mode) . flycheck-mode)
+  )
+
 (provide 'js-config)
