@@ -1,6 +1,15 @@
 (eval-when-compile
   (require 'use-package))
 
+;; don't grep in these
+(eval-after-load 'grep
+  '(progn
+     (add-to-list 'grep-find-ignored-directories "tmp")
+     (add-to-list 'grep-find-ignored-directories "node_modules")
+     (add-to-list 'grep-find-ignored-directories ".bundle")
+     (add-to-list 'grep-find-ignored-directories "auto")
+     (add-to-list 'grep-find-ignored-directories "elpa")))
+
 ;; don't insert tabs
 (setq-default indent-tabs-mode nil)
 
