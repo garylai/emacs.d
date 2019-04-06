@@ -22,7 +22,8 @@
 (straight-use-package 'dash-functional)
 (straight-use-package 'epl)
 
-(add-to-list 'load-path "./configs")
+(add-to-list 'load-path (concat user-emacs-directory
+        (convert-standard-filename "configs")))
 
 (use-package general-config)
 (use-package navigation-config)
