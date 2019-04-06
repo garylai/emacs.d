@@ -29,3 +29,4 @@
 (use-package elisp-config)
 (use-package yaml-config)
 (use-package rust-config)
+(use-package text-config)
