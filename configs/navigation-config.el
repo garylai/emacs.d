@@ -3,7 +3,7 @@
 
 (use-package projectile
   :straight t
-  :config
+  :init
   (projectile-global-mode)
   (setq projectile-switch-project-action 'neotree-projectile-action)
   :bind (:map projectile-mode-map
