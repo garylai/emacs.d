@@ -1,3 +1,5 @@
+;;; depends on eslint(JS): npm install -g eslint
+;;; depends on tern(JS): npm install -g tern
 (eval-when-compile
   (require 'use-package))
 
