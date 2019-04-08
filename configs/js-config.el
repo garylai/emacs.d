@@ -27,17 +27,33 @@
   :straight t
   :mode ("\\.json$" . json-mode))
 
-(use-package tern
+(use-package lsp-mode
   :straight t
-  :hook (web-mode . tern-mode)
-  )
-
-(use-package company-tern
+  :config
+  (setq lsp-eldoc-render-all nil
+        lsp-inhibit-message t
+        lsp-prefer-flymake :none
+        lsp-highlight-symbol-at-point nil)
+  
+  (use-package lsp-ui
     :straight t
-    :after company
-    :init
-    (add-to-list 'company-backends 'company-tern)
-)
+    :config
+    (setq lsp-ui-sideline-enable t
+          lsp-ui-sideline-show-code-actions nil
+          lsp-ui-sideline-show-flycheck nil
+          lsp-ui-doc-enable nil
+          lsp-ui-peek-enable nil)
+    :commands lsp-ui-mode)
+
+  (use-package company-lsp
+    :straight t
+    :commands company-lsp
+    :config
+    (push 'company-lsp company-backends))
+
+  :hook
+  (web-mode . lsp))
+
 
 (use-package flycheck-flow
   :straight t
@@ -45,5 +61,21 @@
   :config
   (flycheck-add-mode 'javascript-flow 'web-mode)
   )
+
+
+;; make lsp to start ts server when using web-mode
+(require 'el-patch)
+
+(el-patch-feature lsp-mode)
+
+(with-eval-after-load 'lsp-clients
+  (with-no-warnings
+    (el-patch-defun lsp-typescript-javascript-tsx-jsx-activate-p (filename mode)
+                    "Check if the javascript-typescript language server should be enabled
+based on FILE-NAME and MAJOR-MODE"
+                    (or (member mode '(typescript-mode typescript-tsx-mode js-mode web-mode js2-mode rjsx-mode))
+                        (and (eq major-mode 'web-mode)
+                             (or (string-suffix-p ".tsx" filename t)
+                                 (string-suffix-p ".jsx" filename t)))))))
 
 (provide 'js-config)
