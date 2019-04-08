@@ -5,6 +5,9 @@
   :straight t
   :config
   (setq lsp-eldoc-render-all nil
+        lsp-eldoc-enable-hover nil
+        lsp-eldoc-enable-signature-help nil
+        lsp-eldoc-prefer-signature-help nil
         lsp-inhibit-message t
         lsp-prefer-flymake :none
         lsp-highlight-symbol-at-point nil)
@@ -14,7 +17,6 @@
   (use-package lsp-ui
     :straight t
     :config
-    (setq lsp-ui-imenu-enable t)
     (setq
      lsp-ui-imenu-enable t
      lsp-ui-sideline-enable t
@@ -33,5 +35,6 @@
 
   :hook
   (web-mode . lsp))
+
 
 (provide 'lsp-config)
