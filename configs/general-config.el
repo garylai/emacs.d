@@ -93,4 +93,11 @@
   :hook ((sh-mode web-mode yaml-mode) . flycheck-mode)
   )
 
+;; imenu
+(use-package imenu-list
+  :straight t
+  :config
+  (setq imenu-list-focus-after-activation t
+        imenu-list-auto-resize t))
+
 (provide 'general-config)

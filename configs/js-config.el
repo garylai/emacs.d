@@ -1,6 +1,5 @@
 ;;; depends on eslint(JS): npm install -g eslint
-;;; depends on tern(JS): npm install -g tern
-;;; depends on ~/.tern_config
+
 (eval-when-compile
   (require 'use-package))
 
@@ -27,34 +26,6 @@
   :straight t
   :mode ("\\.json$" . json-mode))
 
-(use-package lsp-mode
-  :straight t
-  :config
-  (setq lsp-eldoc-render-all nil
-        lsp-inhibit-message t
-        lsp-prefer-flymake :none
-        lsp-highlight-symbol-at-point nil)
-  
-  (use-package lsp-ui
-    :straight t
-    :config
-    (setq lsp-ui-sideline-enable t
-          lsp-ui-sideline-show-code-actions nil
-          lsp-ui-sideline-show-flycheck nil
-          lsp-ui-doc-enable nil
-          lsp-ui-peek-enable nil)
-    :commands lsp-ui-mode)
-
-  (use-package company-lsp
-    :straight t
-    :commands company-lsp
-    :config
-    (push 'company-lsp company-backends))
-
-  :hook
-  (web-mode . lsp))
-
-
 (use-package flycheck-flow
   :straight t
   :after flycheck
@@ -64,6 +35,8 @@
 
 
 ;; make lsp to start ts server when using web-mode
+;; to-do: https://github.com/emacs-lsp/lsp-mode#adding-support-for-languages
+;; set up lsp-language-id-configuration
 (require 'el-patch)
 
 (el-patch-feature lsp-mode)

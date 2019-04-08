@@ -36,3 +36,4 @@
 (use-package terraform-config)
 (use-package md-config)
 (use-package ielm-config)
+(use-package lsp-config)
