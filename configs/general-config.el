@@ -100,4 +100,14 @@
   (setq imenu-list-focus-after-activation t
         imenu-list-auto-resize t))
 
+;; code folding
+(defun add-code-fold-keys ()
+  (interactive)
+  (local-set-key (kbd "C-c C-e") 'hs-hide-block)
+  (local-set-key (kbd "C-c C-o") 'hs-show-block)
+  (local-set-key (kbd "C-c C-a C-e") 'hs-hide-level)
+  (local-set-key (kbd "C-c C-a C-o") 'hs-show-all))
+
+(add-hook 'hs-minor-mode-hook #'add-code-fold-keys)
+
 (provide 'general-config)
