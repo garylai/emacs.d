@@ -90,6 +90,9 @@
   		(append flycheck-disabled-checkers
   			'(javascript-jshint)))
   (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (custom-set-faces
+   '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
+   '(flycheck-fringe-warning ((t (:foreground "color-220")))))
   :hook ((sh-mode web-mode yaml-mode) . flycheck-mode)
   )
 
