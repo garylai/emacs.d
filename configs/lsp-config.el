@@ -24,6 +24,13 @@
      lsp-ui-sideline-show-flycheck nil
      lsp-ui-doc-enable nil
      lsp-ui-peek-enable nil)
+    (custom-set-faces
+     '(lsp-face-highlight-read ((t (:inherit highlight))))
+     '(lsp-ui-sideline-global ((t (:background "green"))))
+     '(lsp-ui-sideline-current-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
+     '(lsp-ui-sideline-global ((t (:background "green"))))
+     '(lsp-ui-sideline-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :height 0.99)))))
+
     
     :commands lsp-ui-mode)
 
