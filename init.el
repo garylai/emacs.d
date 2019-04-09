@@ -1,6 +1,7 @@
 (setq lexical-binding t)
 
 (setq package-enable-at-startup nil)
+(setq inhibit-startup-message t)
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
