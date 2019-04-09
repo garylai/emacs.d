@@ -16,6 +16,9 @@
 (use-package neotree
   :straight t
   :bind ([f8] . neotree-toggle)
-  :config (setq neo-autorefresh nil))
+  :init
+  (add-hook 'emacs-startup-hook #'neotree-show)
+  :config
+  (setq neo-autorefresh nil))
 
 (provide 'navigation-config)
