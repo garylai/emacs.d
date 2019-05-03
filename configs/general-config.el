@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'use-package))
 
+(menu-bar-mode -1)
+
 ;; Display buffer full path on title
 
 (defun xterm-title-update ()
