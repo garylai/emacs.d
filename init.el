@@ -38,3 +38,4 @@
 (use-package md-config)
 (use-package ielm-config)
 (use-package lsp-config)
+(use-package graphql-config)
