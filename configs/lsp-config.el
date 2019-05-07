@@ -3,6 +3,11 @@
 
 (use-package lsp-mode
   :straight t
+  :bind (:map lsp-mode-map
+              ("M-n" . lsp-rename)
+              ([remap xref-find-definitions] . lsp-find-definition)
+              ([remap xref-find-references] . lsp-find-references))
+
   :config
   (setq lsp-eldoc-render-all nil
         lsp-eldoc-enable-hover nil
@@ -10,9 +15,7 @@
         lsp-eldoc-prefer-signature-help nil
         lsp-inhibit-message t
         lsp-prefer-flymake :none
-        lsp-highlight-symbol-at-point nil)
-  (define-key lsp-mode-map [remap xref-find-definitions] #'lsp-find-definition)
-  (define-key lsp-mode-map [remap xref-find-references] #'lsp-find-references)
+        lsp-highlight-symbol-at-point nil)      
   
   (use-package lsp-ui
     :straight t
@@ -30,8 +33,6 @@
      '(lsp-ui-sideline-current-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
      '(lsp-ui-sideline-global ((t (:background "green"))))
      '(lsp-ui-sideline-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :height 0.99)))))
-
-    
     :commands lsp-ui-mode)
 
   (use-package company-lsp
@@ -39,7 +40,7 @@
     :commands company-lsp
     :config
     (push 'company-lsp company-backends))
-
+  
   :hook
   (web-mode . lsp))
 
