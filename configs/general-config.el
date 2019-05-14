@@ -116,4 +116,11 @@
 
 (add-hook 'hs-minor-mode-hook #'add-code-fold-keys)
 
+;; hightlight current line
+(defun set-highlight-background ()
+  (custom-set-faces
+   '(hl-line ((t (:background "color-237"))))))
+
+(add-hook 'hl-line-mode-hook #'set-highlight-background)
+
 (provide 'general-config)
