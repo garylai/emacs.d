@@ -3,6 +3,8 @@
 
 (menu-bar-mode -1)
 
+(setq linum-format "%4d |")
+
 ;; Display buffer full path on title
 
 (defun xterm-title-update ()
@@ -76,7 +78,7 @@
 (use-package highlight-indent-guides
   :straight t
   :config
-  (setq highlight-indent-guides-method 'column)
+  (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-responsive 'top)
   :hook
   ((web-mode yaml-mode) . highlight-indent-guides-mode)
