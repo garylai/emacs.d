@@ -73,16 +73,15 @@
   )
 
 ;; highlight indentation
-(use-package Highlight-Indentation-for-Emacs
-	      :straight (Highlight-Indentation-for-Emacs
-			 :type git
-			 :host github
-			 :repo "antonj/Highlight-Indentation-for-Emacs")
-	      :hook (
-		     ((web-mode yaml-mode) . highlight-indentation-current-column-mode)
-		     ((web-mode yaml-mode) . highlight-indentation-mode)
-		     )
-	      )
+(use-package highlight-indent-guides
+  :straight t
+  :config
+  (setq highlight-indent-guides-method 'column)
+  (setq highlight-indent-guides-responsive 'top)
+  :hook
+  ((web-mode yaml-mode) . highlight-indent-guides-mode)
+  )
+
 ;; flycheck
 (use-package flycheck
   :straight t
