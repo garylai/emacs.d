@@ -6,7 +6,8 @@
 (use-package web-mode
   :straight t
   :mode (("\\.js$" . web-mode)
-	 ("\\.jsx$" . web-mode))
+	 ("\\.jsx$" . web-mode)
+         ("\\.ts$" . web-mode))
   :hook
   (web-mode . show-paren-mode)
   (web-mode . hs-minor-mode)
