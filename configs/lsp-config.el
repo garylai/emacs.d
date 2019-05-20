@@ -5,8 +5,8 @@
   :straight t
   :bind (:map lsp-mode-map
               ("M-n" . lsp-rename)
-              ([remap xref-find-definitions] . lsp-find-definition)
-              ([remap xref-find-references] . lsp-find-references))
+              ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+              ([remap xref-find-references] . lsp-ui-peek-find-references))
 
   :config
   (setq lsp-eldoc-render-all nil
@@ -26,8 +26,11 @@
      lsp-ui-sideline-show-code-actions nil
      lsp-ui-sideline-show-flycheck nil
      lsp-ui-doc-enable nil
-     lsp-ui-peek-enable nil)
+     lsp-ui-peek-fontify (quote always)
+     lsp-ui-peek-enable t)
+    
     (custom-set-faces
+     '(lsp-ui-peek-peek ((t (:background "#181818"))))
      '(lsp-face-highlight-read ((t (:inherit highlight))))
      '(lsp-ui-sideline-global ((t (:background "green"))))
      '(lsp-ui-sideline-current-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
