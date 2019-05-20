@@ -23,7 +23,10 @@
 (straight-use-package 'el-patch)
 
 (add-to-list 'load-path (concat user-emacs-directory
-        (convert-standard-filename "configs")))
+                                (convert-standard-filename "configs")))
+
+(add-to-list 'load-path (concat user-emacs-directory
+                                (convert-standard-filename "lisp")))
 
 (use-package backup-config)
 (use-package general-config)

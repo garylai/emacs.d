@@ -5,9 +5,6 @@
 
 (use-package web-mode
   :straight t
-  :mode (("\\.js$" . web-mode)
-	 ("\\.jsx$" . web-mode)
-         ("\\.ts$" . web-mode))
   :hook
   (web-mode . show-paren-mode)
   (web-mode . hs-minor-mode)
@@ -26,6 +23,11 @@
      web-mode-enable-auto-quoting nil)
   )
 
+(use-package web-submodes
+  :mode (("\\.jsx?$" . web-js-mode)
+	 ("\\.tsx?$" . web-ts-mode))
+  )
+
 (use-package json-mode
   :straight t
   :mode ("\\.json$" . json-mode))
@@ -34,7 +36,7 @@
   :straight t
   :after flycheck
   :config
-  (flycheck-add-mode 'javascript-flow 'web-mode)
+  (flycheck-add-mode 'javascript-flow 'web-js-mode)
   )
 
 
@@ -54,5 +56,4 @@ based on FILE-NAME and MAJOR-MODE"
                         (and (eq major-mode 'web-mode)
                              (or (string-suffix-p ".tsx" filename t)
                                  (string-suffix-p ".jsx" filename t)))))))
-
 (provide 'js-config)

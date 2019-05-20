@@ -42,7 +42,8 @@
     (push 'company-lsp company-backends))
   
   :hook
-  (web-mode . lsp))
+  (web-js-mode . lsp)
+  (web-ts-mode . lsp))
 
 
 (provide 'lsp-config)
