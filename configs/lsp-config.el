@@ -46,4 +46,7 @@
   (web-ts-mode . lsp))
 
 
+(use-package lsp-patch
+  :after (lsp-mode))
+
 (provide 'lsp-config)
