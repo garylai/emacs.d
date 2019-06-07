@@ -1,3 +1,4 @@
+
 (eval-when-compile
   (require 'use-package))
 
@@ -45,6 +46,7 @@
     (push 'company-lsp company-backends))
   
   :hook
+  (typescript-mode . lsp)
   (web-js-mode . lsp)
   (web-ts-mode . lsp))
 

@@ -24,8 +24,7 @@
   )
 
 (use-package web-submodes
-  :mode (("\\.jsx?$" . web-js-mode)
-	 ("\\.tsx?$" . web-ts-mode))
+  :mode ("\\.jsx?$" . web-js-mode)
   )
 
 (use-package json-mode
