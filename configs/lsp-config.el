@@ -17,6 +17,9 @@
         lsp-inhibit-message t
         lsp-prefer-flymake :none
         lsp-highlight-symbol-at-point nil)      
+
+  (use-package yasnippet
+    :straight t)
   
   (use-package lsp-ui
     :straight t
