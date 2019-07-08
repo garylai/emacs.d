@@ -8,7 +8,7 @@
   :init
   (setq typescript-indent-level 2)
   :mode
-  ("\\.tsx?$" . typescript-mode)
+  ("\\.ts$" . typescript-mode)
   )
 
 (provide 'typescript-config)

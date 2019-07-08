@@ -27,6 +27,10 @@
   :mode ("\\.jsx?$" . web-js-mode)
   )
 
+(use-package web-submodes
+  :mode ("\\.tsx$" . web-ts-mode)
+  )
+
 (use-package json-mode
   :straight t
   :mode ("\\.json$" . json-mode))
