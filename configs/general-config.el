@@ -97,7 +97,7 @@
   (custom-set-faces
    '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
    '(flycheck-fringe-warning ((t (:foreground "color-220")))))
-  :hook ((sh-mode web-js-mode web-ts-mode yaml-mode) . flycheck-mode)
+  :hook ((sh-mode web-js-mode yaml-mode) . flycheck-mode)
   )
 
 ;; imenu
