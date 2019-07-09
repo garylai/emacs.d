@@ -93,11 +93,12 @@
   		(append flycheck-disabled-checkers
   			'(javascript-jshint)))
   (flycheck-add-mode 'javascript-eslint 'web-js-mode)
-  (flycheck-add-mode 'typescript-tslint 'web-ts-mode)
+  (flycheck-add-mode 'javascript-eslint 'web-ts-mode)
+  (flycheck-add-mode 'javascript-eslint 'typescript-mode)
   (custom-set-faces
    '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
    '(flycheck-fringe-warning ((t (:foreground "color-220")))))
-  :hook ((sh-mode web-js-mode yaml-mode) . flycheck-mode)
+  :hook ((sh-mode web-js-mode web-ts-mode yaml-mode typescript-mode) . flycheck-mode)
   )
 
 ;; imenu
