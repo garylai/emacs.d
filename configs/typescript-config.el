@@ -5,6 +5,12 @@
 
 (use-package typescript-mode
   :straight t
+  :hook
+  (typescript-mode . show-paren-mode)
+  (typescript-mode . hs-minor-mode)
+  (typescript-mode . linum-mode)
+  (typescript-mode . hl-line-mode)
+  
   :init
   (setq typescript-indent-level 2)
   :mode
