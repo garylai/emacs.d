@@ -16,7 +16,11 @@
         lsp-eldoc-prefer-signature-help nil
         lsp-inhibit-message t
         lsp-prefer-flymake :none
-        lsp-highlight-symbol-at-point nil)      
+        lsp-highlight-symbol-at-point nil)
+  (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
+  (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
+  (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
+  
 
   (use-package yasnippet
     :straight t)
@@ -53,9 +57,5 @@
   (typescript-mode . lsp)
   (web-js-mode . lsp)
   (web-ts-mode . lsp))
-
-
-(use-package lsp-patch
-  :after (lsp-mode))
 
 (provide 'lsp-config)

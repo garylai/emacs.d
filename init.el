@@ -20,7 +20,7 @@
 (straight-use-package 'dash)
 (straight-use-package 'dash-functional)
 (straight-use-package 'epl)
-(straight-use-package 'el-patch)
+
 
 (add-to-list 'load-path (concat user-emacs-directory
                                 (convert-standard-filename "configs")))
