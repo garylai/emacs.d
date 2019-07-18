@@ -125,4 +125,11 @@
 
 (add-hook 'hl-line-mode-hook #'set-highlight-background)
 
+;; css-mode config
+(defun set-css-mode-indent ()
+  (setq css-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  )
+
+(add-hook 'css-mode-hook #'set-css-mode-indent)
 (provide 'general-config)
