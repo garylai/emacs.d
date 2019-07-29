@@ -12,8 +12,8 @@
   :config
   (setq lsp-eldoc-render-all nil
         lsp-eldoc-enable-hover nil
-        lsp-eldoc-enable-signature-help nil
-        lsp-eldoc-prefer-signature-help nil
+        lsp-eldoc-enable-signature-help t
+        lsp-eldoc-prefer-signature-help t
         lsp-inhibit-message t
         lsp-prefer-flymake :none
         lsp-highlight-symbol-at-point nil)
@@ -29,6 +29,7 @@
     :straight t
     :config
     (setq
+     
      lsp-ui-imenu-enable t
      lsp-ui-sideline-enable t
      lsp-ui-sideline-show-code-actions nil
