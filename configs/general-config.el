@@ -36,6 +36,8 @@
      (add-to-list 'grep-find-ignored-directories "node_modules")
      (add-to-list 'grep-find-ignored-directories ".bundle")
      (add-to-list 'grep-find-ignored-directories "auto")
+     (add-to-list 'grep-find-ignored-directories "dist")
+     (add-to-list 'grep-find-ignored-directories "dist_dev")
      (add-to-list 'grep-find-ignored-directories "elpa")))
 
 ;; don't insert tabs
