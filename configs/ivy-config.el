@@ -3,13 +3,11 @@
   :config
   (progn
     (ivy-mode))
-  :bind (
-         ("C-s" . swiper)
-         ("M-x" . counsel-M-x)
-         ("C-x C-f" . counsel-find-file))
   :init
   (setq ivy-re-builders-alist
-      '((t . ivy--regex-fuzzy)))
+        '((swiper . ivy--regex-plus)
+          (counsel-ag . ivy--regex-plus)
+          (t . ivy--regex-fuzzy)))
   (setq
    ivy-use-virtual-buffers t
    ivy-count-format "(%d/%d) "))
@@ -19,9 +17,20 @@
   :after ivy)
 
 (use-package swiper
-  :straight t)
+  :straight t
+  :bind (
+         ("C-s" . swiper))
+  )
 
 (use-package counsel
-  :straight t)
+  :straight t
+  :bind (
+         ("M-x" . counsel-M-x)
+         ("C-x C-f" . counsel-find-file)
+         :map projectile-command-map
+         ("s s" . counsel-ag))
+  )
+
+
 
 (provide 'ivy-config)
