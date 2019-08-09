@@ -33,6 +33,7 @@
 (use-package dockerfile-config)
 (use-package navigation-config)
 (use-package typescript-config)
+(use-package ivy-config)
 (use-package js-config)
 (use-package elisp-config)
 (use-package yaml-config)

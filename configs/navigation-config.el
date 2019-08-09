@@ -10,14 +10,13 @@
   :init
   (projectile-global-mode)
   (setq projectile-switch-project-action 'neotree-projectile-action)
+  (setq projectile-completion-system 'ivy)
   :bind (:map projectile-mode-map
 	 ("C-c p" . projectile-command-map)))
 
 (use-package neotree
   :straight t
   :bind ([f8] . neotree-toggle)
-  :init
-  (add-hook 'emacs-startup-hook #'neotree-show)
   :config
   (setq neo-autorefresh nil))
 
