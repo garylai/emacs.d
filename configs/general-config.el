@@ -113,6 +113,13 @@
   (setq imenu-list-focus-after-activation t
         imenu-list-auto-resize t))
 
+;; mode line
+(use-package doom-modeline
+  :straight t
+  :config
+  (setq doom-modeline-buffer-encoding nil)
+  :hook (after-init . doom-modeline-mode))
+
 ;; code folding
 (defun add-code-fold-keys ()
   (interactive)
