@@ -43,6 +43,8 @@
 ;; don't insert tabs
 (setq-default indent-tabs-mode nil)
 
+(setq-default display-line-numbers (quote relative))
+
 (use-package ido
   :straight t
   :config
