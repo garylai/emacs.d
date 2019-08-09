@@ -51,6 +51,9 @@
 	(quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
   )
 
+(use-package fzf
+  :straight t)
+
 ;; Clipboard
 (use-package xclip
   :straight t
