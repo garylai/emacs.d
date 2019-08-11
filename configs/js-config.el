@@ -10,6 +10,7 @@
   (web-mode . hs-minor-mode)
   (web-mode . hl-line-mode)
   :config
+  (unbind-key "C-c C-r" web-mode-map)
   (setcdr (assoc "lineup-args" web-mode-indentation-params) nil)
   (setcdr (assoc "lineup-concats" web-mode-indentation-params) nil)
   (setcdr (assoc "lineup-calls" web-mode-indentation-params) nil)

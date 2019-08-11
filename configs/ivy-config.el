@@ -3,6 +3,7 @@
   :config
   (progn
     (ivy-mode))
+  :bind (("C-c C-r" . ivy-resume))
   :init
   (setq ivy-re-builders-alist
         '((counsel-M-x . ivy--regex-fuzzy)
@@ -13,12 +14,14 @@
 
 (use-package swiper
   :straight t
+  :after ivy
   :bind (
          ("C-s" . swiper))
   )
 
 (use-package counsel
   :straight t
+  :after ivy
   :bind (
          ("M-x" . counsel-M-x)
          ("C-x C-f" . counsel-find-file)
