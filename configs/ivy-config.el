@@ -5,16 +5,11 @@
     (ivy-mode))
   :init
   (setq ivy-re-builders-alist
-        '((swiper . ivy--regex-plus)
-          (counsel-ag . ivy--regex-plus)
-          (t . ivy--regex-fuzzy)))
+        '((counsel-M-x . ivy--regex-fuzzy)
+          (t . ivy--regex-ignore-order )))
   (setq
    ivy-use-virtual-buffers t
    ivy-count-format "(%d/%d) "))
-
-(use-package flx
-  :straight t
-  :after ivy)
 
 (use-package swiper
   :straight t
