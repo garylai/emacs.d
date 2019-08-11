@@ -16,7 +16,8 @@
   :straight t
   :after ivy
   :bind (
-         ("C-s" . swiper))
+         ("C-s" . swiper)
+         ("C-r" . swiper))
   )
 
 (use-package counsel
