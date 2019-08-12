@@ -9,6 +9,7 @@
   (web-mode . show-paren-mode)
   (web-mode . hs-minor-mode)
   (web-mode . hl-line-mode)
+  (web-mode . display-line-numbers-mode)
   :config
   (unbind-key "C-c C-r" web-mode-map)
   (setcdr (assoc "lineup-args" web-mode-indentation-params) nil)

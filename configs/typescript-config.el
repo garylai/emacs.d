@@ -9,6 +9,7 @@
   (typescript-mode . show-paren-mode)
   (typescript-mode . hs-minor-mode)
   (typescript-mode . hl-line-mode)
+  (web-mode . display-line-numbers-mode)
   :init
   (setq typescript-indent-level 2)
   :mode
