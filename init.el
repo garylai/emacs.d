@@ -2,6 +2,7 @@
 
 (setq package-enable-at-startup nil)
 (setq inhibit-startup-message t)
+(setq find-file-visit-truename t)
 (setq initial-buffer-choice  "~/org/work.org")
 
 
