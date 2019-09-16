@@ -10,8 +10,8 @@
   (add-hook 'org-shiftleft-final-hook #'windmove-left)
   (add-hook 'org-shiftdown-final-hook #'windmove-down)
   (add-hook 'org-shiftright-final-hook #'windmove-right)
-  (setq org-agenda-files (list "~/org/work.org"
-                               "~/org/personal.org"))
+  (setq org-agenda-files (list "~/org"
+                               "~/org/1on1"))
   :bind
   (("C-c a" . org-agenda)
    ;; ("C-c s" . org-search-view)
