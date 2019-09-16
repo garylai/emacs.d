@@ -2,6 +2,8 @@
 
 (setq package-enable-at-startup nil)
 (setq inhibit-startup-message t)
+(setq initial-buffer-choice  "~/org/work.org")
+
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -44,3 +46,4 @@
 (use-package ielm-config)
 (use-package lsp-config)
 (use-package graphql-config)
+(use-package org-config)
