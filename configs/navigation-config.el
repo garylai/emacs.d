@@ -5,6 +5,10 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
+(use-package ace-window
+  :straight t
+  :bind (("M-o" . ace-window))
+  )
 (use-package projectile
   :straight t
   :init
