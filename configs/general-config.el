@@ -5,6 +5,20 @@
 
 (setq linum-format "%4d |")
 
+;; file changes
+(use-package git-gutter
+  :straight t
+  :config
+  (global-git-gutter-mode t)
+  (setq git-gutter:modified-sign ">>")
+  (setq git-gutter:added-sign "++")
+  (setq git-gutter:deleted-sign "--")
+  (custom-set-faces
+   '(git-gutter:added ((t (:background "color-235" :foreground "#878700"))))
+   '(git-gutter:deleted ((t (:background "color-235" :foreground "#870000"))))
+   '(git-gutter:modified ((t (:background "color-235" :foreground "#875f87")))))
+   )
+
 ;; Display buffer full path on title
 
 (defun xterm-title-update ()
