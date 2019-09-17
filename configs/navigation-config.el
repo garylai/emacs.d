@@ -13,7 +13,7 @@
   :straight t
   :init
   (projectile-global-mode)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
+  ;; (setq projectile-switch-project-action 'neotree-projectile-action)
   (setq projectile-completion-system 'ivy)
   :bind (:map projectile-mode-map
 	 ("C-c p" . projectile-command-map)))
@@ -22,6 +22,9 @@
   :straight t
   :bind ([f8] . neotree-toggle)
   :config
-  (setq neo-autorefresh nil))
+  (setq neo-autorefresh nil)
+  (setq neo-smart-open t)
+  )
+
 
 (provide 'navigation-config)
