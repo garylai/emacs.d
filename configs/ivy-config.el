@@ -26,6 +26,8 @@
          ("C-x C-f" . counsel-find-file)
          :map projectile-command-map
          ("s s" . counsel-ag))
+  :init
+  (setq counsel-ag-base-command "ag --nocolor --nogroup --ignore dist_dev --ignore node_modules %s")
   )
 
 
