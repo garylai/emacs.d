@@ -83,7 +83,7 @@
 (use-package company
   :straight t
   :hook
-  ((web-mode emacs-lisp-mode lisp-interaction) . company-mode)
+  ((web-mode typescript-mode emacs-lisp-mode lisp-interaction) . company-mode)
   :config
   (setq company-tooltip-align-annotations t)
   :bind (

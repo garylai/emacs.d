@@ -1,4 +1,4 @@
-
+;; npm install -g typescript-language-server typescript
 (eval-when-compile
   (require 'use-package))
 
@@ -33,9 +33,10 @@
      lsp-ui-imenu-enable t
      lsp-ui-sideline-enable t
      lsp-ui-sideline-show-code-actions nil
-     lsp-ui-sideline-show-flycheck nil
+     lsp-ui-sideline-show-flycheck t
      lsp-ui-sideline-delay 1.5
      lsp-ui-doc-enable nil
+     lsp-prefer-flymake nil
      lsp-ui-peek-fontify (quote always)
      lsp-ui-peek-enable t)
     
