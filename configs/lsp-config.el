@@ -44,8 +44,9 @@
      '(lsp-ui-peek-peek ((t (:background "#181818"))))
      '(lsp-face-highlight-read ((t (:inherit highlight))))
      ;; '(lsp-ui-sideline-global ((t (:background "green"))))
-     '(lsp-ui-sideline-current-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
-     '(lsp-ui-sideline-symbol ((t (:foreground "black" :box (:line-width -1 :color "black") :height 0.99)))))
+     '(lsp-ui-sideline-symbol-info ((t (:foreground "brightblue" :slant italic :height 0.99))))
+     '(lsp-ui-sideline-current-symbol ((t (:foreground "brightcyan" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
+     '(lsp-ui-sideline-symbol ((t (:foreground "color-242" :box (:line-width -1 :color "black") :height 0.99)))))
     :commands lsp-ui-mode)
 
   (use-package company-lsp
