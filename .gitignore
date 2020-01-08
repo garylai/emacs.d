@@ -2,5 +2,13 @@ elpa/
 *~
 straight/build/
 straight/repos/
+straight/modified/
+history
+projectile-bookmarks.eld
+projectile.cache
+recentf
+.lsp-session-v1
+ido.last
 straight/build-cache.el
 .DS_Store
+eslint-plugin
