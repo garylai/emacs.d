@@ -48,3 +48,4 @@
 (use-package lsp-config)
 (use-package graphql-config)
 (use-package org-config)
+(use-package groovy-config)
