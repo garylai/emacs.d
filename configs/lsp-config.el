@@ -1,4 +1,5 @@
 ;; npm install -g typescript-language-server typescript
+;; install eslint plugin https://github.com/emacs-lsp/lsp-mode/wiki/LSP-ESlint-integration, then ln to ~/.emacs.d/eslint-plugin
 (eval-when-compile
   (require 'use-package))
 
@@ -17,26 +18,30 @@
         lsp-inhibit-message t
         lsp-prefer-flymake :none
         lsp-highlight-symbol-at-point nil)
+  (setq lsp-eslint-server-command
+   '("node"
+     "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
+     "--stdio"))
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
-  
 
   (use-package yasnippet
     :straight t)
-  
+
   (use-package lsp-ui
     :straight t
     :config
-    (setq
-     
-     lsp-ui-imenu-enable t
+    (setq     
+     lsp-ui-imenu-enable nil
      lsp-ui-sideline-enable t
      lsp-ui-sideline-show-code-actions nil
-     lsp-ui-sideline-show-flycheck t
+     lsp-ui-flycheck t
+     lsp-ui-flycheck-enable t
+     lsp-ui-flycheck-live-reporting t
      lsp-ui-sideline-delay 1.5
+     lsp-ui-sideline-show-hover t
      lsp-ui-doc-enable nil
-     lsp-prefer-flymake nil
      lsp-ui-peek-fontify (quote always)
      lsp-ui-peek-enable t)
     
