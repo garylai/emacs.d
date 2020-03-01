@@ -13,7 +13,9 @@
   ;; (add-hook 'org-shiftdown-final-hook #'windmove-down)
   ;; (add-hook 'org-shiftright-final-hook #'windmove-right)
   (setq org-agenda-files (list "~/org"
-                               "~/org/1on1"))
+                               "~/org/1on1"
+                               "~/org/work/"
+                               "~/workspace/meeting-notes"))
   :bind
   (("C-c a" . org-agenda)
    ;; ("C-c s" . org-search-view)
