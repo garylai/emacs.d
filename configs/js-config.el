@@ -34,6 +34,11 @@
 
 (use-package json-mode
   :straight t
+  :hook
+  (json-mode . show-paren-mode)
+  (json-mode . hs-minor-mode)
+  (json-mode . hl-line-mode)
+  (json-mode . display-line-numbers-mode)
   :mode ("\\.json$" . json-mode))
 
 (use-package flycheck-flow
