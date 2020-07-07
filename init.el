@@ -49,3 +49,4 @@
 (use-package graphql-config)
 (use-package org-config)
 (use-package groovy-config)
+(use-package centaur-tabs-config)
