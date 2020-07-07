@@ -2,6 +2,10 @@
   (require 'use-package))
 
 (menu-bar-mode -1)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+
+(set-face-attribute 'default nil :height 150)
 
 (setq linum-format "%4d |")
 
