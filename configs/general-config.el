@@ -9,6 +9,14 @@
 
 (setq linum-format "%4d |")
 
+;; env vars for GUI emacs
+(use-package exec-path-from-shell
+  :straight t
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+  )
+
 ;; file changes
 (use-package git-gutter
   :straight t
@@ -31,8 +39,10 @@
     (if buffer-file-name
         (let ((relative-path (file-relative-name (buffer-file-name) (projectile-project-root))))
           (send-string-to-terminal (concat "\033]2; " relative-path "\007")))))
-   
-(add-hook 'post-command-hook 'xterm-title-update)
+
+(unless (memq window-system '(mac ns x))
+  (add-hook 'post-command-hook 'xterm-title-update)
+)
 
 ;; code fold
 (defun toggle-fold ()
