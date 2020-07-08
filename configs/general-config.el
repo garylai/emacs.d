@@ -2,8 +2,10 @@
   (require 'use-package))
 
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
+(when (memq window-system '(mac ns x))
+  (toggle-scroll-bar -1)
+  (tool-bar-mode -1)
+)
 
 (set-face-attribute 'default nil :height 150)
 
@@ -14,7 +16,8 @@
   :straight t
   :config
   (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
+    (exec-path-from-shell-initialize)
+    (setq exec-path-from-shell-check-startup-files nil))
   )
 
 ;; file changes
