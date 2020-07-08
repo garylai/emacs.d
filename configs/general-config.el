@@ -28,11 +28,17 @@
   (setq git-gutter:modified-sign ">>")
   (setq git-gutter:added-sign "++")
   (setq git-gutter:deleted-sign "--")
-  (custom-set-faces
-   '(git-gutter:added ((t (:background "color-235" :foreground "#878700"))))
-   '(git-gutter:deleted ((t (:background "color-235" :foreground "#870000"))))
-   '(git-gutter:modified ((t (:background "color-235" :foreground "#875f87")))))
-   )
+  (if (memq window-system '(mac ns x))
+      (custom-set-faces
+       '(git-gutter:added ((t (:background "gray25" :foreground "#878700"))))
+       '(git-gutter:deleted ((t (:background "gray25" :foreground "#870000"))))
+       '(git-gutter:modified ((t (:background "gray25" :foreground "#875f87")))))
+      (custom-set-faces
+       '(git-gutter:added ((t (:background "color-235" :foreground "#878700"))))
+       '(git-gutter:deleted ((t (:background "color-235" :foreground "#870000"))))
+       '(git-gutter:modified ((t (:background "color-235" :foreground "#875f87")))))
+    )
+  )
 
 ;; Display buffer full path on title
 
@@ -162,8 +168,14 @@
 
 ;; hightlight current line
 (defun set-highlight-background ()
-  (custom-set-faces
-   '(hl-line ((t (:background "color-237"))))))
+  (if (memq window-system '(mac ns x))
+      (custom-set-faces
+       '(hl-line ((t (:background "gray25"))))
+       )
+      (custom-set-faces
+       '(hl-line ((t (:background "color-237")))))
+    )
+  )
 
 (add-hook 'hl-line-mode-hook #'set-highlight-background)
 
