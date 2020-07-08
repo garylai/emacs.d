@@ -44,14 +44,25 @@
      lsp-ui-doc-enable nil
      lsp-ui-peek-fontify (quote always)
      lsp-ui-peek-enable t)
-    
-    (custom-set-faces
-     '(lsp-ui-peek-peek ((t (:background "#181818"))))
-     '(lsp-face-highlight-read ((t (:inherit highlight))))
-     ;; '(lsp-ui-sideline-global ((t (:background "green"))))
-     '(lsp-ui-sideline-symbol-info ((t (:foreground "brightblue" :slant italic :height 0.99))))
-     '(lsp-ui-sideline-current-symbol ((t (:foreground "brightcyan" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
-     '(lsp-ui-sideline-symbol ((t (:foreground "color-242" :box (:line-width -1 :color "black") :height 0.99)))))
+
+    (if (memq window-system '(mac ns x))
+        ;; GUI
+        (custom-set-faces
+       '(lsp-ui-peek-peek ((t (:background "#181818"))))
+       '(lsp-face-highlight-read ((t (:inherit highlight))))
+       ;; '(lsp-ui-sideline-global ((t (:background "green"))))
+       '(lsp-ui-sideline-symbol-info ((t (:foreground "light blue" :slant italic :height 0.99))))
+       '(lsp-ui-sideline-current-symbol ((t (:foreground "light cyan" :box nil :weight ultra-bold :height 0.99))))
+       '(lsp-ui-sideline-symbol ((t (:foreground "dim gray" :box nil :height 0.99)))))
+      ;; terminal
+      (custom-set-faces
+       '(lsp-ui-peek-peek ((t (:background "#181818"))))
+       '(lsp-face-highlight-read ((t (:inherit highlight))))
+       ;; '(lsp-ui-sideline-global ((t (:background "green"))))
+       '(lsp-ui-sideline-symbol-info ((t (:foreground "brightblue" :slant italic :height 0.99))))
+       '(lsp-ui-sideline-current-symbol ((t (:foreground "brightcyan" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
+       '(lsp-ui-sideline-symbol ((t (:foreground "color-242" :box (:line-width -1 :color "black") :height 0.99)))))
+      )
     :commands lsp-ui-mode)
 
   (use-package company-lsp
