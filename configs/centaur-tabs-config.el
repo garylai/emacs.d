@@ -17,9 +17,10 @@
   :bind
   ("C-[ [ a ," . centaur-tabs-backward)
   ("C-[ [ a ." . centaur-tabs-forward)
-  ("C-," . centaur-tabs-backward)
-  ("C-." . centaur-tabs-forward)
+  ("C-{" . centaur-tabs-backward)
+  ("C-}" . centaur-tabs-forward)
   ("C-c t g" . centaur-tabs-counsel-switch-group)
+  ("C-c t k" . centaur-tabs-kill-other-buffers-in-current-group)
   )
 
 (provide 'centaur-tabs-config)
