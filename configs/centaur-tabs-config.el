@@ -40,7 +40,7 @@
 				 )))
 	  "Emacs")
          ((derived-mode-p 'vterm-mode)
-	  "Terms")
+	  "Shells")
          ((condition-case _err
               (projectile-project-root)
             (error nil)) (projectile-project-name))
