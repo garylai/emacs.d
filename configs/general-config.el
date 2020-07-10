@@ -64,7 +64,7 @@
       (set-selective-display
        (if selective-display nil (or col 1))))))
 
-(global-set-key (kbd "C-c f") 'toggle-fold)
+;; (global-set-key (kbd "C-c f") 'toggle-fold)
 
 ;; don't grep in these
 (eval-after-load 'grep
