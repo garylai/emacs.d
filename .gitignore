@@ -12,3 +12,4 @@ ido.last
 straight/build-cache.el
 .DS_Store
 eslint-plugin
+transient/
