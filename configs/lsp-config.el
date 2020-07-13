@@ -9,15 +9,44 @@
               ("M-n" . lsp-rename)
               ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
               ([remap xref-find-references] . lsp-ui-peek-find-references))
+  :hook
+  (typescript-mode . lsp)
+  (web-js-mode . lsp)
+  (web-ts-mode . lsp)
+  :custom
+  ((lsp-log-io nil)
+   (lsp-print-performance nil)
 
+   (lsp-enable-snippet nil)
+
+   (lsp-eldoc-render-all nil)
+   (lsp-eldoc-enable-hover nil)
+   (lsp-eldoc-enable-signature-help t)
+   (lsp-eldoc-prefer-signature-help t)
+
+   (lsp-enable-indentation nil)
+   (lsp-enable-file-watchers nil)
+
+   (lsp-inhibit-message t)
+
+   (lsp-modeline-code-actions-enable nil)
+
+   (lsp-signature-auto-activate nil)
+
+   (lsp-prefer-flymake :none)
+   (lsp-enable-symbol-highlighting t))
+  :preface
+  (progn
+    (defun turing-it-off-and-on-again ()
+      (when lsp-enable-symbol-highlighting
+        (lsp-toggle-symbol-highlight))
+      (lsp-toggle-symbol-highlight))
+    (defun restart-highlight ()
+      (run-at-time "2 sec" nil 'turing-it-off-and-on-again)))
   :config
-  (setq lsp-eldoc-render-all nil
-        lsp-eldoc-enable-hover nil
-        lsp-eldoc-enable-signature-help t
-        lsp-eldoc-prefer-signature-help t
-        lsp-inhibit-message t
-        lsp-prefer-flymake :none
-        lsp-highlight-symbol-at-point nil)
+  ;; when eslint and typescript server are both enabled, lsp doesn't think the current workspace have highlight feature somehow when it starts...
+  (progn
+    (add-hook 'lsp-mode-hook #'restart-highlight))
   (setq lsp-eslint-server-command
         '("node"
           "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
@@ -25,32 +54,27 @@
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
-  
-  :hook
-  (typescript-mode . lsp)
-  (web-js-mode . lsp)
-  (web-ts-mode . lsp))
+  :commands lsp)
 
-(use-package yasnippet
-  :straight t)
+;; (use-package yasnippet
+;;   :straight t)
 
 (use-package lsp-ui
   :straight t
+  :custom
+  ((lsp-ui-imenu-enable nil)
+   (lsp-ui-sideline-enable t)
+   (lsp-ui-sideline-show-code-actions nil)
+   ;; (lsp-ui-flycheck nil)
+   (lsp-ui-flycheck-enable t)
+   (lsp-ui-sideline-show-diagnostics t)
+   ;; (lsp-ui-flycheck-live-reporting nil)
+   (lsp-ui-sideline-delay 1.5)
+   (lsp-ui-sideline-show-hover t)
+   (lsp-ui-doc-enable nil)
+   (lsp-ui-peek-fontify (quote always))
+   (lsp-ui-peek-enable nil))
   :config
-  (setq     
-   lsp-ui-imenu-enable nil
-   lsp-ui-sideline-enable t
-   lsp-ui-sideline-show-code-actions nil
-   ;; lsp-ui-flycheck nil
-   lsp-ui-flycheck-enable t
-   lsp-ui-sideline-show-diagnostics t
-   ;; lsp-ui-flycheck-live-reporting nil
-   ;; lsp-ui-sideline-delay 1.5
-   lsp-ui-sideline-show-hover t
-   lsp-ui-doc-enable t
-   lsp-ui-peek-fontify (quote always)
-   lsp-ui-peek-enable nil)
-
   (if (memq window-system '(mac ns x))
       ;; GUI
       (custom-set-faces
@@ -71,10 +95,10 @@
     )
   :commands lsp-ui-mode)
 
-(use-package company-lsp
-  :straight t
-  :commands company-lsp
-  :config
-  (push 'company-lsp company-backends))
+;; (use-package company-lsp
+;;   :straight t
+;;   :commands company-lsp
+;;   :config
+;;   (push 'company-lsp company-backends))
 
 (provide 'lsp-config)
