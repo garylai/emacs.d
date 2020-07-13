@@ -128,8 +128,8 @@
   :config
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-responsive 'top)
-  :hook
-  ((web-mode yaml-mode) . highlight-indent-guides-mode)
+  ;; :hook
+  ;; ((web-mode yaml-mode) . highlight-indent-guides-mode)
   )
 
 ;; flycheck
