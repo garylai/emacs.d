@@ -7,6 +7,8 @@
   :config
   (setq vterm-buffer-name-string "%s"
         vterm-kill-buffer-on-exit t)
+  (custom-set-faces
+   '(vterm-color-default ((t (:inherit default :background "black")))))
   :bind
   (("C-c v n" . vterm-other-window)
    ("C-c v v" . vterm))
