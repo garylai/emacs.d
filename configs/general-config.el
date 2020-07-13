@@ -10,7 +10,7 @@
 (global-auto-composition-mode -1)
 (auto-compression-mode -1)
 (auto-encryption-mode -1)
-(async-bytecomp-package-mode -1)
+;; (async-bytecomp-package-mode -1)
 
 (set-face-attribute 'default nil :height 150)
 
