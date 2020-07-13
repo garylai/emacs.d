@@ -19,61 +19,62 @@
         lsp-prefer-flymake :none
         lsp-highlight-symbol-at-point nil)
   (setq lsp-eslint-server-command
-   '("node"
-     "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
-     "--stdio"))
+        '("node"
+          "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
+          "--stdio"))
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
+  
+  :hook
+  (typescript-mode . lsp)
+  (web-js-mode . lsp)
+  (web-ts-mode . lsp))
 
-  (use-package yasnippet
-    :straight t)
+(use-package yasnippet
+  :straight t)
 
-  (use-package lsp-ui
-    :straight t
-    :config
-    (setq     
-     lsp-ui-imenu-enable nil
-     lsp-ui-sideline-enable t
-     lsp-ui-sideline-show-code-actions nil
-     lsp-ui-flycheck t
-     lsp-ui-flycheck-enable t
-     lsp-ui-flycheck-live-reporting t
-     lsp-ui-sideline-delay 1.5
-     lsp-ui-sideline-show-hover t
-     lsp-ui-doc-enable nil
-     lsp-ui-peek-fontify (quote always)
-     lsp-ui-peek-enable t)
+(use-package lsp-ui
+  :straight t
+  :config
+  (setq     
+   lsp-ui-imenu-enable nil
+   lsp-ui-sideline-enable t
+   lsp-ui-sideline-show-code-actions nil
+   ;; lsp-ui-flycheck nil
+   lsp-ui-flycheck-enable t
+   lsp-ui-sideline-show-diagnostics t
+   ;; lsp-ui-flycheck-live-reporting nil
+   ;; lsp-ui-sideline-delay 1.5
+   lsp-ui-sideline-show-hover t
+   lsp-ui-doc-enable t
+   lsp-ui-peek-fontify (quote always)
+   lsp-ui-peek-enable nil)
 
-    (if (memq window-system '(mac ns x))
-        ;; GUI
-        (custom-set-faces
+  (if (memq window-system '(mac ns x))
+      ;; GUI
+      (custom-set-faces
        '(lsp-ui-peek-peek ((t (:background "#181818"))))
        '(lsp-face-highlight-read ((t (:inherit highlight))))
        ;; '(lsp-ui-sideline-global ((t (:background "green"))))
        '(lsp-ui-sideline-symbol-info ((t (:foreground "light blue" :slant italic :height 0.99))))
        '(lsp-ui-sideline-current-symbol ((t (:foreground "light cyan" :box nil :weight ultra-bold :height 0.99))))
        '(lsp-ui-sideline-symbol ((t (:foreground "dim gray" :box nil :height 0.99)))))
-      ;; terminal
-      (custom-set-faces
-       '(lsp-ui-peek-peek ((t (:background "#181818"))))
-       '(lsp-face-highlight-read ((t (:inherit highlight))))
-       ;; '(lsp-ui-sideline-global ((t (:background "green"))))
-       '(lsp-ui-sideline-symbol-info ((t (:foreground "brightblue" :slant italic :height 0.99))))
-       '(lsp-ui-sideline-current-symbol ((t (:foreground "brightcyan" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
-       '(lsp-ui-sideline-symbol ((t (:foreground "color-242" :box (:line-width -1 :color "black") :height 0.99)))))
-      )
-    :commands lsp-ui-mode)
+    ;; terminal
+    (custom-set-faces
+     '(lsp-ui-peek-peek ((t (:background "#181818"))))
+     '(lsp-face-highlight-read ((t (:inherit highlight))))
+     ;; '(lsp-ui-sideline-global ((t (:background "green"))))
+     '(lsp-ui-sideline-symbol-info ((t (:foreground "brightblue" :slant italic :height 0.99))))
+     '(lsp-ui-sideline-current-symbol ((t (:foreground "brightcyan" :box (:line-width -1 :color "black") :weight ultra-bold :height 0.99))))
+     '(lsp-ui-sideline-symbol ((t (:foreground "color-242" :box (:line-width -1 :color "black") :height 0.99)))))
+    )
+  :commands lsp-ui-mode)
 
-  (use-package company-lsp
-    :straight t
-    :commands company-lsp
-    :config
-    (push 'company-lsp company-backends))
-  
-  :hook
-  (typescript-mode . lsp)
-  (web-js-mode . lsp)
-  (web-ts-mode . lsp))
+(use-package company-lsp
+  :straight t
+  :commands company-lsp
+  :config
+  (push 'company-lsp company-backends))
 
 (provide 'lsp-config)
