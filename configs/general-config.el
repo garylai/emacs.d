@@ -7,6 +7,10 @@
   (tool-bar-mode -1)
 )
 
+(global-auto-composition-mode -1)
+(auto-compression-mode -1)
+(auto-encryption-mode -1);
+
 (set-face-attribute 'default nil :height 150)
 
 (setq linum-format "%4d |")
@@ -24,7 +28,7 @@
 (use-package git-gutter
   :straight t
   :config
-  (global-git-gutter-mode t)
+  ;; (global-git-gutter-mode t)
   (setq git-gutter:modified-sign ">>")
   (setq git-gutter:added-sign "++")
   (setq git-gutter:deleted-sign "--")
