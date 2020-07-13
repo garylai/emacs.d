@@ -99,7 +99,9 @@
 (use-package xclip
   :straight t
   :config
-  (xclip-mode 1))
+  (unless (memq window-system '(mac ns x))
+    (xclip-mode 1))
+  )
 
 ;; Theme
 (use-package darktooth-theme
