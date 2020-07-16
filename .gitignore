@@ -13,3 +13,4 @@ straight/build-cache.el
 .DS_Store
 eslint-plugin
 transient/
+forge-database.sqlite
