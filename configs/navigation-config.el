@@ -38,9 +38,10 @@
           treemacs-no-png-images nil
           treemacs-space-between-root-nodes nil
           treemacs-width 30
+          ;; treemacs-no-png-images t
           treemacs-resize-icons 15)
     (treemacs-follow-mode t))
-  :bind (([f8] . treemacs))
+  :bind (("C-x t" . treemacs))
   (:map treemacs-mode-map
         ("C-s" . treemacs-find-file))
   )
