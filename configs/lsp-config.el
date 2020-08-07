@@ -69,7 +69,7 @@
    (lsp-ui-flycheck-enable t)
    (lsp-ui-sideline-show-diagnostics t)
    ;; (lsp-ui-flycheck-live-reporting nil)
-   (lsp-ui-sideline-delay 1.5)
+   (lsp-ui-sideline-delay 3)
    (lsp-ui-sideline-show-hover t)
    (lsp-ui-doc-enable nil)
    (lsp-ui-peek-fontify (quote always))
