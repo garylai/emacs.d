@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'use-package))
 
+(line-number-mode 0)
+
 (menu-bar-mode -1)
 (when (memq window-system '(mac ns x))
   (toggle-scroll-bar -1)
