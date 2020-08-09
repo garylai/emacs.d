@@ -53,3 +53,4 @@
 (use-package vterm-config)
 (use-package magit-config)
 (use-package atomic-chrome-config)
+(use-package pandoc-config)
