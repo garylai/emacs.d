@@ -52,3 +52,4 @@
 (use-package centaur-tabs-config)
 (use-package vterm-config)
 (use-package magit-config)
+(use-package atomic-chrome-config)
