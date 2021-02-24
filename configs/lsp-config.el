@@ -34,6 +34,8 @@
 
    (lsp-signature-auto-activate nil)
 
+   ;; this doesn't work ATM (doing it in before-save-hook)
+   (lsp-eslint-auto-fix-on-save t)
    (lsp-prefer-flymake :none)
    (lsp-enable-symbol-highlighting t))
 
