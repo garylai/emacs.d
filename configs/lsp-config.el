@@ -26,15 +26,18 @@
 
    (lsp-enable-indentation nil)
    (lsp-enable-file-watchers nil)
+   (lsp-headerline-breadcrumb-enable nil)
 
    (lsp-inhibit-message t)
 
    (lsp-modeline-code-actions-enable nil)
 
    (lsp-signature-auto-activate nil)
+   (lsp-enable-links nil)
 
    (lsp-prefer-flymake :none)
    (lsp-enable-symbol-highlighting t))
+
   :preface
   (progn
     (defun turing-it-off-and-on-again ()
@@ -45,8 +48,8 @@
       (run-at-time "2 sec" nil 'turing-it-off-and-on-again)))
   :config
   ;; when eslint and typescript server are both enabled, lsp doesn't think the current workspace have highlight feature somehow when it starts...
-  (progn
-    (add-hook 'lsp-mode-hook #'restart-highlight))
+  ;; (progn
+  ;;   (add-hook 'lsp-mode-hook #'restart-highlight))
   (setq lsp-eslint-server-command
         '("node"
           "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
@@ -54,6 +57,7 @@
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
+  
   :commands lsp)
 
 ;; (use-package yasnippet

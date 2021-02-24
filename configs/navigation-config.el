@@ -34,8 +34,10 @@
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
   :config
   (progn
+    (require 'ace-window)
     (setq aw-ignored-buffers (delq 'treemacs-mode aw-ignored-buffers)
           treemacs-no-png-images nil
+          reemacs-is-never-other-window nil
           treemacs-space-between-root-nodes nil
           treemacs-width 30
           ;; treemacs-no-png-images t
