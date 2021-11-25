@@ -5,6 +5,7 @@
 (setq find-file-visit-truename t)
 (setq initial-buffer-choice  "~/org/work.org")
 
+(desktop-save-mode 1)
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
