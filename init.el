@@ -3,7 +3,6 @@
 (setq package-enable-at-startup nil)
 (setq inhibit-startup-message t)
 (setq find-file-visit-truename t)
-(setq initial-buffer-choice  "~/org/work.org")
 
 (desktop-save-mode 1)
 
@@ -55,3 +54,4 @@
 (use-package magit-config)
 (use-package atomic-chrome-config)
 (use-package pandoc-config)
+;; (put 'downcase-region 'disabled nil)
