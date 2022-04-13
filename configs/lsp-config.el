@@ -19,15 +19,16 @@
 
    (lsp-enable-snippet nil)
 
+   (lsp-enable-indentation nil)
+   (lsp-enable-file-watchers nil)
+   (lsp-headerline-breadcrumb-enable nil)
+
    (lsp-eldoc-render-all nil)
    (lsp-eldoc-enable-hover nil)
    (lsp-eldoc-enable-signature-help t)
    (lsp-eldoc-prefer-signature-help t)
 
-   (lsp-enable-indentation nil)
-   (lsp-enable-file-watchers nil)
-   (lsp-headerline-breadcrumb-enable nil)
-
+   
    (lsp-inhibit-message t)
 
    (lsp-modeline-code-actions-enable nil)
@@ -58,7 +59,6 @@
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
-  
   :commands lsp)
 
 ;; (use-package yasnippet
@@ -67,18 +67,29 @@
 (use-package lsp-ui
   :straight t
   :custom
-  ((lsp-ui-imenu-enable nil)
+  ((lsp-ui-doc-enable nil)
+   (lsp-ui-imenu-enable nil)
    (lsp-ui-sideline-enable t)
    (lsp-ui-sideline-show-code-actions nil)
+   (lsp-ui-doc-show-with-cursor t)
+   (lsp-ui-doc-border (face-foreground 'default))
    ;; (lsp-ui-flycheck nil)
    (lsp-ui-flycheck-enable t)
    (lsp-ui-sideline-show-diagnostics t)
    ;; (lsp-ui-flycheck-live-reporting nil)
-   (lsp-ui-sideline-delay 3)
+   (lsp-ui-sideline-delay 2)
+   (lsp-ui-doc-delay 2)
+   (lsp-ui-doc-position 'at-point)
    (lsp-ui-sideline-show-hover t)
-   (lsp-ui-doc-enable nil)
    (lsp-ui-peek-fontify (quote always))
    (lsp-ui-peek-enable nil))
+  :hook (
+         ((org-mode) . (lambda ()
+                                                        (setq lsp-ui-sideline-show-code-actions t)
+                                                        ))
+         (org-mode . lsp-ui-doc-mode)
+         )
+
   :config
   (if (memq window-system '(mac ns x))
       ;; GUI
@@ -105,5 +116,20 @@
 ;;   :commands company-lsp
 ;;   :config
 ;;   (push 'company-lsp company-backends))
+
+;; npm install -g @emacs-grammarly/keytar-cli
+
+
+(use-package keytar
+  :straight t
+  :config
+  (keytar-install)
+)
+(use-package lsp-grammarly
+  :straight t
+  :hook ((text-mode org-mode) . (lambda ()
+                       (require 'lsp-grammarly)
+                       (lsp)))
+  )
 
 (provide 'lsp-config)

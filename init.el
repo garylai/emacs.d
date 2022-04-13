@@ -4,7 +4,7 @@
 (setq inhibit-startup-message t)
 (setq find-file-visit-truename t)
 
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -54,4 +54,3 @@
 (use-package magit-config)
 (use-package atomic-chrome-config)
 (use-package pandoc-config)
-;; (put 'downcase-region 'disabled nil)
