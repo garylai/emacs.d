@@ -22,11 +22,12 @@
      web-mode-code-indent-offset 2
      web-mode-css-indent-offset 2
      web-mode-markup-indent-offset 2
-     web-mode-enable-auto-quoting nil)
+     web-mode-enable-auto-quoting nil
+     web-mode-content-types-alist '(("javascript" . "\\.m?jsx?$")))
   )
 
 (use-package web-submodes
-  :mode ("\\.jsx?$" . web-js-mode)
+  :mode ("\\.m?jsx?$" . web-js-mode)
   )
 
 (use-package web-submodes
