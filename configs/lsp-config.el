@@ -127,6 +127,10 @@
 )
 (use-package lsp-grammarly
   :straight t
+  :init
+  (setq lsp-grammarly-dialect "british")
+  (setq lsp-ui-doc-max-width 60)
+  (setq lsp-grammarly-auto-activate nil)
   :hook ((text-mode org-mode) . (lambda ()
                        (require 'lsp-grammarly)
                        (lsp)))
