@@ -3,6 +3,8 @@
 
 (line-number-mode 0)
 
+(setq windmove-mode nil)
+
 (menu-bar-mode -1)
 (when (memq window-system '(mac ns x))
   (toggle-scroll-bar -1)
@@ -195,4 +197,5 @@
   )
 
 (add-hook 'css-mode-hook #'set-css-mode-indent)
+
 (provide 'general-config)
