@@ -126,7 +126,9 @@
   :straight t
   :config
   (keytar-install)
-)
+  )
+
+;; change to (when (version<= emacs-version "28.1") f.el
 (use-package lsp-grammarly
   :straight t
   :init
