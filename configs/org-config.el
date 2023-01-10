@@ -9,6 +9,8 @@
   (setq org-agenda-window-setup (quote current-window))
   (setq org-src-window-setup (quote current-window))
   (setq org-agenda-todo-list-sublevels nil)
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "IN-PROGRESS(i!)" "ON-HOLD(h!)" "|" "NOT DO(n@)" "DONE(d!)" "DELEGATED(g@)")))
   (add-hook 'after-init-hook 'org-todo-list)
     ;; (add-hook 'org-shiftup-final-hook #'windmove-up)
   ;; (add-hook 'org-shiftleft-final-hook #'windmove-left)
