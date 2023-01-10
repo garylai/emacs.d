@@ -13,6 +13,7 @@
   (typescript-mode . lsp)
   (web-js-mode . lsp)
   (web-ts-mode . lsp)
+  (csharp-mode . lsp)
   :custom
   ((lsp-log-io nil)
    (lsp-print-performance nil)
@@ -49,6 +50,7 @@
     (defun restart-highlight ()
       (run-at-time "2 sec" nil 'turing-it-off-and-on-again)))
   :config
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
   ;; when eslint and typescript server are both enabled, lsp doesn't think the current workspace have highlight feature somehow when it starts...
   (progn
     (add-hook 'lsp-mode-hook #'restart-highlight))
