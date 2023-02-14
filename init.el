@@ -55,3 +55,4 @@
 (use-package atomic-chrome-config)
 (use-package pandoc-config)
 (use-package csharp-config)
+(use-package mermaid-config)
