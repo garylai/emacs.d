@@ -15,3 +15,10 @@ eslint-plugin
 transient/
 forge-database.sqlite
 .cache/
+.emacs.desktop
+.lsp-eslint-choices
+.org-id-locations
+projects
+request/
+tramp
+url
