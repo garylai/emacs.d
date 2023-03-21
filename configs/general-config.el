@@ -198,4 +198,12 @@
 
 (add-hook 'css-mode-hook #'set-css-mode-indent)
 
+(defun reset-facemenu-keymap ()
+  (local-unset-key (kbd "M-o"))
+; don't know what to bind to yet
+;  (local-set-key (kbd "M-f") 'facemenu-keymap)
+  )
+
+(add-hook 'mhtml-mode-hook #'reset-facemenu-keymap)
+
 (provide 'general-config)
