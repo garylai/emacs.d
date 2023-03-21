@@ -39,7 +39,7 @@
           treemacs-no-png-images nil
           reemacs-is-never-other-window nil
           treemacs-space-between-root-nodes nil
-          treemacs-width 30
+          treemacs-width 60
           ;; treemacs-no-png-images t
           treemacs-resize-icons 15)
     (treemacs-follow-mode t))
