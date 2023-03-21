@@ -1,5 +1,5 @@
 ;; npm install -g typescript-language-server typescript
-;; install eslint plugin https://github.com/emacs-lsp/lsp-mode/wiki/LSP-ESlint-integration, then ln to ~/.emacs.d/eslint-plugin
+;; install eslint server: https://emacs-lsp.github.io/lsp-mode/page/lsp-eslint/
 (eval-when-compile
   (require 'use-package))
 
@@ -54,10 +54,6 @@
   ;; when eslint and typescript server are both enabled, lsp doesn't think the current workspace have highlight feature somehow when it starts...
   (progn
     (add-hook 'lsp-mode-hook #'restart-highlight))
-  (setq lsp-eslint-server-command
-        '("node"
-          "/Users/garylai/.emacs.d/eslint-plugin/extension/server/out/eslintServer.js" 
-          "--stdio"))
   (add-to-list 'lsp-language-id-configuration '(web-js-mode . "javascript"))
   (add-to-list 'lsp-language-id-configuration '(web-ts-mode . "typescript"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescript"))
