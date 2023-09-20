@@ -10,6 +10,7 @@
   (web-mode . hs-minor-mode)
   (web-mode . hl-line-mode)
   (web-mode . display-line-numbers-mode)
+  (web-mode . indium-interaction-mode)
   (before-save . lsp-eslint-fix-all)
   :config
   (unbind-key "C-c C-r" web-mode-map)

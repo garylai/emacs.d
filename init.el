@@ -56,3 +56,28 @@
 (use-package pandoc-config)
 (use-package csharp-config)
 (use-package mermaid-config)
+(use-package indium-config)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(groovy-indent-offset 4))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
+ '(flycheck-fringe-warning ((t (:foreground "color-220"))))
+ '(git-gutter:added ((t (:background "gray25" :foreground "#878700"))))
+ '(git-gutter:deleted ((t (:background "gray25" :foreground "#870000"))))
+ '(git-gutter:modified ((t (:background "gray25" :foreground "#875f87"))))
+ '(hl-line ((t (:background "gray25"))))
+ '(lsp-face-highlight-read ((t (:inherit highlight))))
+ '(lsp-ui-peek-peek ((t (:background "#181818"))))
+ '(lsp-ui-sideline-current-symbol ((t (:foreground "light cyan" :box nil :weight ultra-bold :height 0.99))))
+ '(lsp-ui-sideline-symbol ((t (:foreground "dim gray" :box nil :height 0.99))))
+ '(lsp-ui-sideline-symbol-info ((t (:foreground "light blue" :slant italic :height 0.99))))
+ '(vterm-color-black ((t (:background "gray72" :foreground "black")))))
