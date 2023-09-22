@@ -1,5 +1,11 @@
 ;; npm install -g typescript-language-server typescript
 ;; install eslint server: https://emacs-lsp.github.io/lsp-mode/page/lsp-eslint/
+;; if encounter eslint problem, check if a .eslintrc exist in path that has:
+;; {
+;;   parserOptions: {
+;;     requireConfigFile: false,
+;;   }
+;; }
 (eval-when-compile
   (require 'use-package))
 
