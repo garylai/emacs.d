@@ -165,6 +165,7 @@
   :straight t
   :config
   (setq doom-modeline-buffer-encoding nil)
+  (setq doom-modeline-buffer-file-name-style 'truncate-nil)
   :hook (after-init . doom-modeline-mode))
 
 ;; code folding
