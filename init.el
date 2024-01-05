@@ -58,6 +58,8 @@
 (use-package mermaid-config)
 (use-package indium-config)
 
+(setq interpreter-mode-alist (rassq-delete-all 'js-mode interpreter-mode-alist))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
