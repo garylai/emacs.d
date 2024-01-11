@@ -24,6 +24,17 @@
 (straight-use-package 'dash-functional)
 (straight-use-package 'epl)
 
+(unless (package-installed-p 'quelpa)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+    (eval-buffer)
+    (quelpa-self-upgrade)))
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
 
 (add-to-list 'load-path (concat user-emacs-directory
                                 (convert-standard-filename "configs")))
@@ -57,6 +68,7 @@
 (use-package csharp-config)
 (use-package mermaid-config)
 (use-package indium-config)
+(use-package apex-config)
 
 (setq interpreter-mode-alist (rassq-delete-all 'js-mode interpreter-mode-alist))
 
