@@ -69,6 +69,7 @@
 (use-package mermaid-config)
 (use-package indium-config)
 (use-package apex-config)
+(use-package xml-config)
 
 (setq interpreter-mode-alist (rassq-delete-all 'js-mode interpreter-mode-alist))
 
