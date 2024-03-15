@@ -12,7 +12,9 @@
   :straight t
   :demand
   ;; :hook
-  ;; (vterm-mode . eterm-256color-mode)
+  ;; (vterm-mode . (lambda ()
+  ;;   (set (make-local-variable 'buffer-face-mode-face) '(:family "0xProto Nerd Font Mono"))
+  ;;   (buffer-face-mode t)))
   :config
   (setq
    ;; vterm-term-environment-variable "eterm-color"

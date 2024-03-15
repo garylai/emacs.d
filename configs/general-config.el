@@ -113,6 +113,10 @@
   :config
   (load-theme 'darktooth t))
 
+;; font install from https://www.nerdfonts.com/font-downloads
+(add-to-list 'default-frame-alist
+             '(font . "0xProto Nerd Font Mono-15"))
+
 ;; Auto-Complete
 (use-package company
   :straight t
@@ -161,6 +165,7 @@
         imenu-list-auto-resize t))
 
 ;; mode line
+;; need to run M-x nerd-icons-install-fonts to get icons
 (use-package doom-modeline
   :straight t
   :config
