@@ -38,7 +38,7 @@
    
    (lsp-inhibit-message t)
 
-   (lsp-modeline-code-actions-enable nil)
+   (lsp-modeline-code-actions-enable t)
 
    (lsp-signature-auto-activate nil)
 
@@ -88,9 +88,9 @@
    (lsp-ui-peek-fontify (quote always))
    (lsp-ui-peek-enable nil))
   :hook (
-         ((org-mode) . (lambda ()
-                                                        (setq lsp-ui-sideline-show-code-actions t)
-                                                        ))
+         ;; ((org-mode) . (lambda ()
+         ;;                                                (setq lsp-ui-sideline-show-code-actions t)
+         ;;                                                ))
          (org-mode . lsp-ui-doc-mode)
          )
 
