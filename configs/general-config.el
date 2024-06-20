@@ -116,6 +116,7 @@
 ;; font install from https://www.nerdfonts.com/font-downloads
 (add-to-list 'default-frame-alist
              '(font . "0xProto Nerd Font Mono-15"))
+(setq line-spacing 0.2)
 
 ;; Auto-Complete
 (use-package company
