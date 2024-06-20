@@ -45,6 +45,7 @@
     (treemacs-follow-mode t))
   :bind (("C-x t" . treemacs))
   (:map treemacs-mode-map
+        ("M" . treemacs-mark-or-unmark-path-at-point)
         ("C-s" . treemacs-find-file))
   )
 
