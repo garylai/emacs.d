@@ -42,6 +42,10 @@
   (json-mode . hs-minor-mode)
   (json-mode . hl-line-mode)
   (json-mode . display-line-numbers-mode)
+  (json-mode . (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq tab-width 2)
+            (setq js-indent-level 2)))
   :mode ("\\.json$" . json-mode))
 
 (use-package flycheck-flow
