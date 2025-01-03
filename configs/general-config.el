@@ -1,6 +1,15 @@
 (eval-when-compile
   (require 'use-package))
 
+(cond
+  ((string-equal system-type "gnu/linux")
+     (setq x-super-keysym 'meta)
+     (setq x-meta-keysym 'ctrl)
+  )
+)
+
+(setq warning-minimum-level :error)
+
 (line-number-mode 0)
 
 (setq windmove-mode nil)
