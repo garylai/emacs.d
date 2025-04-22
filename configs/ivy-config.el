@@ -27,7 +27,7 @@
          :map projectile-command-map
          ("s s" . counsel-ag))
   :init
-  (setq counsel-ag-base-command "ag --nocolor --nogroup --ignore dist_dev --ignore node_modules %s")
+  (setq counsel-ag-base-command "ag --nocolor --nogroup --ignore dist_dev --hidden --ignore node_modules %s")
   )
 
 
