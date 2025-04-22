@@ -1,3 +1,4 @@
+
 ;; npm install -g typescript-language-server typescript
 ;; install eslint server: https://emacs-lsp.github.io/lsp-mode/page/lsp-eslint/
 ;; if encounter eslint problem, check if a .eslintrc exist in path that has:
@@ -20,6 +21,7 @@
   (web-js-mode . lsp)
   (web-ts-mode . lsp)
   (csharp-mode . lsp)
+  (python-mode . lsp)
   :custom
   ((lsp-log-io nil)
    (lsp-print-performance nil)
