@@ -73,6 +73,7 @@
 (use-package indium-config)
 (use-package apex-config)
 (use-package xml-config)
+(use-package copilot-config)
 
 (setq interpreter-mode-alist (rassq-delete-all 'js-mode interpreter-mode-alist))
 
