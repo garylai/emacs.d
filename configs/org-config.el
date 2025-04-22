@@ -3,6 +3,7 @@
   (require 'use-package))
 
 (use-package org
+  :straight t
   :mode (("\\.org$" . org-mode))
   :init
   (setq org-log-done t)
