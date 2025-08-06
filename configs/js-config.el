@@ -20,8 +20,8 @@
   (setcdr (assoc "lineup-ternary" web-mode-indentation-params) nil)
   :init
   (setq 
-     web-mode-code-indent-offset 2
-     web-mode-css-indent-offset 2
+     web-mode-code-indent-offset my/js-indent-level
+     web-mode-css-indent-offset my/js-indent-level
      web-mode-markup-indent-offset 2
      web-mode-enable-auto-quoting nil
      web-mode-content-types-alist '(("javascript" . "\\.m?jsx?$")))

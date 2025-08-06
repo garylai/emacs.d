@@ -46,6 +46,13 @@
 (add-to-list 'load-path (concat user-emacs-directory
                                 (convert-standard-filename "lisp")))
 
+(defvar my/js-indent-level 2
+  "Default indentation level, can be overridden in indent-local.el.")
+
+(let ((local-indent-file (expand-file-name "custom-local.el" user-emacs-directory)))
+  (when (file-exists-p local-indent-file)
+    (load local-indent-file)))
+
 (use-package backup-config)
 (use-package general-config)
 (use-package dockerfile-config)

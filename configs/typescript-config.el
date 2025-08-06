@@ -11,7 +11,7 @@
   (typescript-mode . hl-line-mode)
   (typescript-mode . display-line-numbers-mode)
   :init
-  (setq typescript-indent-level 2)
+  (setq typescript-indent-level my/js-indent-level)
   :mode
   ("\\.ts$" . typescript-mode)
   )
