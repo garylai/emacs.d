@@ -5,6 +5,8 @@
   :straight t
   :config
   (require 'dap-node)
-  (dap-node-setup))
+  (require 'dap-php)
+  (dap-node-setup)
+  (dap-php-setup))
 
 (provide 'dap-config)
