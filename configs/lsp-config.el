@@ -22,6 +22,7 @@
   (web-ts-mode . lsp)
   (csharp-mode . lsp)
   (python-mode . lsp)
+  (php-mode . lsp)
   :custom
   ((lsp-log-io nil)
    (lsp-print-performance nil)
