@@ -35,8 +35,13 @@
   :config
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)
+    (exec-path-from-shell-copy-envs '("NVM_DIR" "PATH" "NODE_VERSION" "NPM_TOKEN"))
     (setq exec-path-from-shell-check-startup-files nil))
   )
+
+(use-package envrc
+  :straight t
+  :hook (after-init . envrc-global-mode))
 
 ;; file changes
 (use-package git-gutter
