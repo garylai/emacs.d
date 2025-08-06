@@ -155,6 +155,11 @@
   ;; ((web-mode yaml-mode) . highlight-indent-guides-mode)
   )
 
+
+;; use .envrc to add local vendor/bin to $PATH
+(use-package flycheck-psalm
+  :straight t)
+
 ;; flycheck
 (use-package flycheck
   :straight t
@@ -168,7 +173,7 @@
   (custom-set-faces
    '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
    '(flycheck-fringe-warning ((t (:foreground "color-220")))))
-  :hook ((sh-mode web-js-mode web-ts-mode yaml-mode typescript-mode) . flycheck-mode)
+  :hook ((sh-mode web-js-mode web-ts-mode yaml-mode typescript-ts-mode js-ts-mode php-mode) . flycheck-mode)
   )
 
 ;; imenu
