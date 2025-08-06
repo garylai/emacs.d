@@ -1,5 +1,6 @@
 (setq lexical-binding t)
 
+(defvar native-comp-deferred-compilation-deny-list nil)
 (setq package-enable-at-startup nil)
 (setq inhibit-startup-message t)
 (setq find-file-visit-truename t)
