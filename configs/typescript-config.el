@@ -3,17 +3,14 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package typescript-mode
-  :straight t
-  :hook
-  (typescript-mode . show-paren-mode)
-  (typescript-mode . hs-minor-mode)
-  (typescript-mode . hl-line-mode)
-  (typescript-mode . display-line-numbers-mode)
+(use-package typescript-ts-mode
+  :straight (:type built-in)
+  :mode ("\\.tsx?$" . typescript-ts-mode)
+  :hook ((typescript-ts-mode . show-paren-mode)
+         (typescript-ts-mode . hs-minor-mode)
+         (typescript-ts-mode . hl-line-mode)
+         (typescript-ts-mode . display-line-numbers-mode))
   :init
-  (setq typescript-indent-level my/js-indent-level)
-  :mode
-  ("\\.ts$" . typescript-mode)
-  )
+  (setq typescript-ts-mode-indent-offset my/js-indent-level))
 
 (provide 'typescript-config)

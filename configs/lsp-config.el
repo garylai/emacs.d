@@ -18,6 +18,8 @@
               ([remap xref-find-references] . lsp-ui-peek-find-references))
   :hook
   (typescript-mode . lsp)
+  (typescript-ts-mode . lsp)
+  (js-ts-mode . lsp)
   (web-js-mode . lsp)
   (web-ts-mode . lsp)
   (csharp-mode . lsp)

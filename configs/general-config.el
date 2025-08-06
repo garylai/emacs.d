@@ -163,9 +163,8 @@
   (setq-default flycheck-disabled-checkers
   		(append flycheck-disabled-checkers
   			'(javascript-jshint)))
-  (flycheck-add-mode 'javascript-eslint 'web-js-mode)
-  (flycheck-add-mode 'javascript-eslint 'web-ts-mode)
-  (flycheck-add-mode 'javascript-eslint 'typescript-mode)
+  (flycheck-add-mode 'javascript-eslint 'typescript-ts-mode)
+  (flycheck-add-mode 'javascript-eslint 'js-ts-mode)
   (custom-set-faces
    '(flycheck-error-list-warning ((t (:foreground "color-220" :weight bold))))
    '(flycheck-fringe-warning ((t (:foreground "color-220")))))

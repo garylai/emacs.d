@@ -3,37 +3,16 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package web-mode
-  :straight t
-  :hook
-  (web-mode . show-paren-mode)
-  (web-mode . hs-minor-mode)
-  (web-mode . hl-line-mode)
-  (web-mode . display-line-numbers-mode)
-  (web-mode . indium-interaction-mode)
-  (before-save . lsp-eslint-fix-all)
-  :config
-  (unbind-key "C-c C-r" web-mode-map)
-  (setcdr (assoc "lineup-args" web-mode-indentation-params) nil)
-  (setcdr (assoc "lineup-concats" web-mode-indentation-params) nil)
-  (setcdr (assoc "lineup-calls" web-mode-indentation-params) nil)
-  (setcdr (assoc "lineup-ternary" web-mode-indentation-params) nil)
+(use-package js-ts-mode
+  :straight (:type built-in)
+  :mode ("\\.jsx?$" . js-ts-mode)
+  :hook ((js-ts-mode . show-paren-mode)
+         (js-ts-mode . hs-minor-mode)
+         (js-ts-mode . hl-line-mode)
+         (js-ts-mode . display-line-numbers-mode))
   :init
-  (setq 
-     web-mode-code-indent-offset my/js-indent-level
-     web-mode-css-indent-offset my/js-indent-level
-     web-mode-markup-indent-offset 2
-     web-mode-enable-auto-quoting nil
-     web-mode-content-types-alist '(("javascript" . "\\.m?jsx?$")))
-  )
+  (setq js-ts-mode-indent-offset my/js-indent-level))
 
-(use-package web-submodes
-  :mode ("\\.m?jsx?$" . web-js-mode)
-  )
-
-(use-package web-submodes
-  :mode ("\\.tsx$" . web-ts-mode)
-  )
 
 (use-package json-mode
   :straight t
